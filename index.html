@@ -1,1 +1,151 @@
-ttototto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .column {
+      flex: 1;
+      border: 1px;;
+      padding: 1rem;
+      background-color: #ffffff;
+      width: min-content;
+      height: min-content; /* Optional: control vertical space */
+      overflow-y:inherit;
+    }
+    .image{
+        height: fit-content;
+        width:fit-content;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    body {
+        background-image: url('./img/ou.jpg');
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Github home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <header class="bg-white shadow p-6">
+    <div class="max-w-4xl mx-auto flex mix-blend-multiply flex-col sm:flex-row justify-between items-center">
+      <div class="container">
+        <div class="image">
+        <img src="./img/me.png" width="210" height="280" alt="">
+        </div>
+        <div class="column">
+            <h1 class="text-3xl font-bold"><br><br>Pushpendra Pal</h1>
+            <p class="text-gray-600">Cryptography Researcher</p>
+            <br>
+            <div class="mt-4 sm:mt-0 space-x-4">
+                <a href="mailto:isi.pushp@gmail.com" class="text-blue-600 hover:underline">Email</a>
+                <a href="https://www.linkedin.com/in/pushpendra-pal-14ab21186/" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a>
+                <a href="https://www.github.com/pushpadevl" target="_blank" class="text-blue-600 hover:underline">GitHub</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-6">
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Journey to the now.</h2>
+      <p>
+        Hellow fellow, I am Pushpendra, an aspring cryptographer working my way through the maze of zero knowledge proofs and atguments. 
+        </p><p>
+
+            Before completing my Masters in Cryptology & Security from ISI-Kolkata, I was fascinated with operating systems, network security and algorithms. But soon I discovered the real magic lies in the mathematics behind those security protocols and their attacks. Good thing was I had developed an interest in Algorithms in the final years of my BTech at BITS Pilani, which had helped me a lot at ISI and even after that. It is during this time that I realised the potential of mathematics behind algorthms which pushed me towards cryptology. 
+        </p>
+            <p>
+
+                Even though the course at ISI was tough, I had managed to do really well in some subjects like algortihms and cryptographic implementations and average in extremely theoretical subjects like cryptography. Although Algebra and Number Theory, an exception, taught by Anirban Ghatak was the highlight of my first semester there. With the plethora of courses in cryptologyy there, one could be easily bewildered by the amount of stuff they don't know, and yet it ignites an insatiable hunger to know more about such stuff, atleast that's the case for me. Now with everything that I have studied, I find SNARKs and ZKProofs the most exciting thing currently. Wish you good luck in your endeavours.
+            </p>
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Research Interests</h2>
+      <ul class="list-disc pl-5">
+        <li>Zero Knowledge Proofs, SNARKs</li>
+        <li>Multiparty Computation</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Few Projects</h2>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>BLS Signature on BLS12-381 using Rust</li>
+        <li>Shamir Secret Sharing & BGW MPC Protocol</li>
+        <li>Tonelli Shanks algorithm for finding Quadratic Residue square root.</li>
+        <li>Subset of important CP algorithms</li>
+        <li>Fast fourier transform implementations in C and Java</li>
+        <li>A bunch of weird hostorical cryptographic puzzle set from Cryptex fest</li>
+        <li>Implementation of problems and solutions from Java Puzzlers book.</li>
+        <li>Classical AES + HMAC + SHA-1 Implementations in C</li>
+        <li>Quantum Algorithms in Qiskit</li>
+        <li>Real-world attack simulations (Mitnick attack, IoT protocol analysis)</li>
+        <li>These and more available at <a href="https://www.github.com/pushpadevl"  class="text-blue-600 hover:underline">Github</a></li>
+    </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Notes Collection</h2>
+      <p class="mb-2">This is a growing collection of my cryptographic notes and summaries:</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>GKR Interactive Proofs</li>
+        <li>PLONK Explained</li>
+        <li>Elliptic Curves & Bilinear Pairings</li>
+        <li>Polynomial Commitment Schemes</li>
+        <li>Number Theory in Cryptography</li>
+        <li>For more, visit<a href="fletore/" class="text-blue-600 hover:underline"> fletore</a></li>
+      </ul>
+    </section>
+    <section class="mb-8">
+      <h2 class="text-2xl font-semibold mb-2">Book recommendations</h2>
+      <p class="mb-2">Although not an avid reader, these are some titles to excite yoou.</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Journey to the west. Four volumes <i>by Anthony C. Yu</i></li>
+        <li>Story of my experiments with truth. <i>by Mahatma Gandhi</i></li>
+        <li>The God Delusion <i>by Richard Dawkins</i></li>
+        <li>Predictably Irrational <i>by Dan Ariely</i></li>
+        <li>1984 <i>by George Orwell</i></li>
+        <li>The Economic Naturalist <i>by Robert H. Frank</i></li>
+        <li>'Surely, you're joking, Mr. Feynman!'' <i>by Richard Feynman</i></li>
+        <li>The Argumentative Indian<i>by Amartya Sen</i></li>
+        <li>The Arabian Nights <i>Translation, Andrew Lang</i></li>
+        <li>Sarva Darsana Samgraha, a 14th century book <i>by Madhavacharya</i></li>
+        <li>The First Three Minutes <i>Steven Weinberg</i></li>
+        <li>Gulamgiri <i>by Jyotirao Phule</i></li>
+        <li>Keepers of the Kalchakra <i>by Ashwin Sanghi</i></li>
+        <li>The Alchemist <i>Paulho Coelho</i></li>
+        <li>Bhagavad Gita as it is <i>by HDG AC Bhaktivedanta Swami Prabhupada</i></it></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-white shadow p-4 text-center text-sm text-gray-500">
+    &copy; 2025 pushpadevl. Built with ❤️ for cryptography lovers.
+  </footer>
+</body>
+</html>
