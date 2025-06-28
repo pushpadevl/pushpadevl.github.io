@@ -46,6 +46,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Github home</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
   <header class="bg-white shadow p-6">
@@ -56,7 +57,7 @@
         </div>
         <div class="column">
             <h1 class="text-3xl font-bold"><br><br>Pushpendra Pal</h1>
-            <p class="text-gray-600">Cryptography Researcher</p>
+            <p class="text-gray-600">Cryptography Researcher | Photographer </p>
             <br>
             <div class="mt-4 sm:mt-0 space-x-4">
                 <a href="mailto:isi.pushp@gmail.com" class="text-gray-500 " title="Mail">
@@ -82,18 +83,23 @@
   <main class="max-w-4xl mx-auto p-6">
     <section class="mb-8">
       <h2 class="text-2xl font-semibold mb-2">Journey to the now.</h2>
-      Hellow fellow,
-      <p>
-         I am Pushpendra, an aspring cryptographer working my way through the maze of zero knowledge proofs and arguments. 
-        </p><p>
 
-            Before completing my Masters in Cryptology & Security from ISI-Kolkata, I was fascinated with operating systems, network security and algorithms. But soon I discovered the real magic lies in the mathematics behind those security protocols and their attacks. Good thing was I had developed an interest in Algorithms in the final years of my BTech at BITS Pilani, which had helped me a lot at ISI and even after that. It is during this time that I realised the potential of mathematics behind algorthms which pushed me towards cryptology. 
+      <div x-data="{ expanded: false }" class="max-w-xl">
+      
+        <p>Hellow fellow, I am Pushpendra, an aspring cryptographer working my way through the maze of zero knowledge proofs and arguments. 
         </p>
-            <p>
-
-                Even though the course at ISI was tough, I had managed to do really well in some subjects like algortihms and cryptographic implementations and average in extremely theoretical subjects like cryptography. Although Algebra and Number Theory, an exception, taught by Anirban Ghatak was the highlight of my first semester there. With the plethora of courses in cryptologyy there, one could be easily bewildered by the amount of stuff they don't know, and yet it ignites an insatiable hunger to know more about such stuff, atleast that's the case for me. Now with everything that I have studied, I find SNARKs and ZKProofs the most exciting thing currently. Wish you good luck in your endeavours.
-            </p>
-      </p>
+        <span x-show="expanded"> <p> Before completing my Masters in Cryptology & Security from ISI-Kolkata, I was fascinated with operating systems, network security and algorithms. But soon I discovered the real magic lies in the mathematics behind those security protocols and their attacks. Good thing was I had developed an interest in Algorithms in the final years of my BTech at BITS Pilani, which had helped me a lot at ISI and even after that. It is during this time that I realised the potential of mathematics behind algorthms which pushed me towards cryptology. 
+          </p><p> Even though the course at ISI was tough, I had managed to do really well in some subjects like algortihms and cryptographic implementations and average in extremely theoretical subjects like cryptography. Although Algebra and Number Theory, an exception, taught by Anirban Ghatak was the highlight of my first semester there. With the plethora of courses in cryptologyy there, one could be easily bewildered by the amount of stuff they don't know, and yet it ignites an insatiable hunger to know more about such stuff, atleast that's the case for me. Now with everything that I have studied, I find SNARKs and ZKProofs the most exciting thing currently. Wish you good luck in your endeavours.
+          </p>
+          </span>
+        <button class="text-green-600 hover:underline mt-0 text-sm" x-show="!expanded" @click="expanded = true" >read more...</button>
+        <button 
+          class="text-green-600 hover:underline mt-0 text-sm"
+          x-show="expanded"
+          @click="expanded = false"
+        >...read less</button>
+      </div>
+      
     </section>
 
     <section class="mb-8">
@@ -117,7 +123,7 @@
         <li>Classical AES + HMAC + SHA-1 Implementations in C</li>
         <li>Quantum Algorithms in Qiskit</li>
         <li>Real-world attack simulations (Mitnick attack, IoT protocol analysis)</li>
-        <li>These and more available at <a href="https://www.github.com/pushpadevl"  class="text-blue-600 hover:underline">Github</a></li>
+        <li>These and more available at <a href="https://www.github.com/pushpadevl"  class="text-green-600 text-sm hover:underline">Github</a></li>
     </ul>
     </section>
 
@@ -130,29 +136,39 @@
         <li>Elliptic Curves & Bilinear Pairings</li>
         <li>Polynomial Commitment Schemes</li>
         <li>Number Theory in Cryptography</li>
-        <li>For more, visit<a href="fletore/" class="text-blue-600 hover:underline"> fletore</a></li>
+        <li>For more, visit<a href="fletore/" class="text-green-600 text-sm hover:underline"> fletore</a></li>
       </ul>
     </section>
     <section class="mb-8">
       <h2 class="text-2xl font-semibold mb-2">Book recommendations</h2>
       <p class="mb-2">Although not an avid reader, these are some titles to excite yoou.</p>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>Journey to the west. Four volumes <i>by Anthony C. Yu</i></li>
-        <li>Story of my experiments with truth. <i>by Mahatma Gandhi</i></li>
-        <li>The God Delusion <i>by Richard Dawkins</i></li>
-        <li>Predictably Irrational <i>by Dan Ariely</i></li>
-        <li>1984 <i>by George Orwell</i></li>
-        <li>The Economic Naturalist <i>by Robert H. Frank</i></li>
-        <li>'Surely, you're joking, Mr. Feynman!'' <i>by Richard Feynman</i></li>
-        <li>The Argumentative Indian<i>by Amartya Sen</i></li>
-        <li>The Arabian Nights <i>Translation, Andrew Lang</i></li>
-        <li>Sarva Darsana Samgraha, a 14th century book <i>by Madhavacharya</i></li>
-        <li>The First Three Minutes <i>Steven Weinberg</i></li>
-        <li>Gulamgiri <i>by Jyotirao Phule</i></li>
-        <li>Keepers of the Kalchakra <i>by Ashwin Sanghi</i></li>
-        <li>The Alchemist <i>Paulho Coelho</i></li>
-        <li>Bhagavad Gita as it is <i>by HDG AC Bhaktivedanta Swami Prabhupada</i></it></li>
-      </ul>
+      
+      <div x-data="{expand: false}" class="max-w-xl">
+        
+        <ul class="list-disc pl-5 space-y-1">
+          
+          <li>The God Delusion <i>by Richard Dawkins</i></li>
+          <li>Predictably Irrational <i>by Dan Ariely</i></li>
+          <li>Story of my experiments with truth. <i>by Mahatma Gandhi</i></li>
+          <span x-show="expand">
+            
+            <li>Journey to the west. Four volumes <i>by Anthony C. Yu</i></li>
+          <li>1984 <i>by George Orwell</i></li>
+          <li>The Economic Naturalist <i>by Robert H. Frank</i></li>
+          <li>'Surely, you're joking, Mr. Feynman!'' <i>by Richard Feynman</i></li>
+          <li>The Argumentative Indian<i>by Amartya Sen</i></li>
+          <li>The Arabian Nights <i>Translation, Andrew Lang</i></li>
+          <li>Sarva Darsana Samgraha, a 14th century book <i>by Madhavacharya</i></li>
+          <li>The First Three Minutes <i>Steven Weinberg</i></li>
+          <li>Gulamgiri <i>by Jyotirao Phule</i></li>
+          <li>Keepers of the Kalchakra <i>by Ashwin Sanghi</i></li>
+          <li>The Alchemist <i>Paulho Coelho</i></li>
+          <li>Bhagavad Gita as it is <i>by HDG AC Bhaktivedanta Swami Prabhupada</i></it></li>
+        </span>
+        </ul>
+      <button class="text-green-600 hover:underline mt-0 text-sm" x-show="!expand" @click="expand = true" >read more...</button>
+        <button class="text-green-600 hover:underline mt-0 text-sm" x-show="expand" @click="expand = false">...read less</button>
+    </div>
     </section>
   </main>
 
