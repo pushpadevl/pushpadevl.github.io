@@ -1,188 +1,328 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-    }
-
-    .container {
-      display: flex;
-      gap: 1rem;
-      padding: 1rem;
-    }
-
-    .column {
-      flex: 1;
-      border: 1px;;
-      padding: 1rem;
-      background-color: #ffffff;
-      width: min-content;
-      height: min-content; /* Optional: control vertical space */
-      overflow-y:inherit;
-    }
-    .image{
-        height: fit-content;
-        width:fit-content;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    body {
-        background-image: url('./img/ou.jpg');
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-  </style>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>pudel_GHP</title>
-  <script src="https://cdn.tailwindcss.com">tailwind.config = {
-      darkMode: 'class'}
-      </script>
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pal Pushpendra</title>
+  <meta name="description" content="[One-sentence summary of who you help and what results you deliver]" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <!-- Add your font and CSS links here -->
+   <link rel="stylesheet" href="style.css">
+  
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans ">
-  <header class="bg-white text-gray-800 p-6 dark:bg-slate-800 dark:text-gray-300">
-    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center">
-      <div class="container ">
-        <div class="image brightness-400">
-        <img src="./img/me.png"  width="270" height="360" alt="">
-        </div>
-        <div class="column dark:bg-slate-800">
-            <h1 class=" text-3xl font-bold"><br><br>Pushpendra Pal</h1>
-            <p class="">Cryptography Researcher </p>
-            <br>
-            <div class="mt-4 sm:mt-0 space-x-6 ">
-              <a href="/fletore/" target="_blank" class="text-gray-500 " title="Fletore (Cryptography notes)">
-                <img src="./img/flet.png" alt="Cryptography Notes" class="w-10 h-10 inline" />
-              </a>
-              <a href="https://www.github.com/pushpadevl" target="_blank" class="text-gray-500 " title="GitHub">
-                <img src="./img/gh.png" alt="Guthub" class="w-10 h-10 inline" />
-              </a>
-              <a href="https://www.linkedin.com/in/pushpendra-pal-14ab21186/" target="_blank" class="text-gray-500 " title="LinkedIn">
-                <img src="./img/lin.png" alt="LinkedIn" class="w-10 h-10 inline" />
-              </a>
-              <a href="https://soloist.ai/mirrored" target="_blank" class="text-gray-500 " title="Photography">
-                <img src="./img/wp.png" alt="Photography" class="w-10 h-10 inline" />
-              </a>
-                <a href="mailto:isi.pushp@gmail.com" class="text-gray-500 " title="Mail">
-                  <img src="./img/gm.png" alt="Mail" class="w-10 h-10 inline" /></a>
-              </div>
-        </div>
-      </div>
-    </div>
-  </header>
+<body>
 
-  <main class="max-w-4xl mx-auto p-6">
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-2">Journey to the present.</h2>
-      <div class="max-w-xl">
-      <!--<div x-data="{ expanded: false }" class="max-w-xl">
+  <!-- Header -->
+  <div class="header-bar">
+    <div class="header-inner">
+      <div class="logo">Pushpendra Pal</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#results">Cryptography</a>
+        <a href="#testimonials">Github</a>
+        <a href="#process">LinkedIn</a>
+        <a href="#services">Photography</a>
+        <!--<button id="theme-toggle" aria-pressed="false" class="btn secondary" title="[Toggle theme]">Toggle theme</button>
       -->
-        <p>Hellow fellow, I am Pushpendra, an aspring cryptographer working my way through the maze of zero knowledge proofs and arguments. 
-        </p>
-        <!--<span x-show="expanded"> -->
-          <p> Before completing my Masters in Cryptology & Security from ISI-Kolkata, I was fascinated with operating systems, network security and algorithms. But soon I discovered the real magic lies in the mathematics behind those security protocols and their attacks. Good thing was I had developed an interest in Algorithms in the final years of my BTech at BITS Pilani, which had helped me a lot at ISI and even after that. It is during this time that I realised the potential of mathematics behind algorthms which pushed me towards cryptology. 
-          </p><p> Even though the course at ISI was tough, I had managed to do really well in some subjects like algortihms and cryptographic implementations and average in extremely theoretical subjects like cryptography. Although Algebra and Number Theory, an exception, taught by Anirban Ghatak was the highlight of my first semester there. With the plethora of courses in cryptologyy there, one could be easily bewildered by the amount of stuff they don't know, and yet it ignites an insatiable hunger to know more about such stuff, atleast that's the case for me. Now with everything that I have studied, I find SNARKs and ZKProofs the most exciting thing currently. Wish you good luck in your endeavours.
-          </p>
-          <!--</span> 
-        <button class="text-green-600 hover:underline mt-0 text-sm" x-show="!expanded" @click="expanded = true" >read more...</button>
-        <button 
-          class="text-green-600 hover:underline mt-0 text-sm"
-          x-show="expanded"
-          @click="expanded = false"
-        >...read less</button> -->
+        <a href="#contact" class="btn" style="margin-left:12px;">Let's Talk</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="site-bg" aria-hidden="true"></div>
+  <!-- Hero -->
+   <div id="app">
+
+   <section class="work-glass will-reveal" style="position:relative; overflow: hidden;">
+
+    <div class="container" style="position:relative; z-index:2;">
+      <div>
+        <h1 id="typewriter"></h1>
+        <p class="subhead will-reveal">Alan Kay</p>
       </div>
-      
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-2">Research Interests</h2>
-      <ul class="list-disc pl-5">
-        <li>Zero Knowledge Proofs, SNARKs</li>
-        <li>Multiparty Computation</li>
-      </ul>
-    </section>
-
-    <!--
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-2">Few Projects</h2>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>BLS Signature on BLS12-381 using Rust</li>
-        <li>Shamir Secret Sharing & BGW MPC Protocol</li>
-        <li>Tonelli Shanks algorithm for finding Quadratic Residue square root.</li>
-        <li>Subset of important CP algorithms</li>
-        <li>Fast fourier transform implementations in C and Java</li>
-        <li>A bunch of weird hostorical cryptographic puzzle set from Cryptex fest</li>
-        <li>Implementation of problems and solutions from Java Puzzlers book.</li>
-        <li>Classical AES + HMAC + SHA-1 Implementations in C</li>
-        <li>Quantum Algorithms in Qiskit</li>
-        <li>Real-world attack simulations (Mitnick attack, IoT protocol analysis)</li>
-        <li>These and more available at <a href="https://www.github.com/pushpadevl"  class="text-green-600 text-sm hover:underline">Github</a></li>
-    </ul>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-2">Notes Collection</h2>
-      <p class="mb-2">This is a growing collection of my cryptographic notes and summaries:</p>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>GKR Interactive Proofs</li>
-        <li>PLONK Explained</li>
-        <li>Elliptic Curves & Bilinear Pairings</li>
-        <li>Polynomial Commitment Schemes</li>
-        <li>Number Theory in Cryptography</li>
-        <li>For more, visit<a href="fletore/" class="text-green-600 text-sm hover:underline"> fletore</a></li>
-      </ul>
-    </section>
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-2">Book recommendations</h2>
-      <p class="mb-2">Although not an avid reader, these are some titles to excite yoou.</p>
-      
-      <div x-data="{expand: false}" class="max-w-xl">
+      <!--
         
-        <ul class="list-disc pl-5 space-y-1">
-          
-          <li>Predictably Irrational <i>by Dan Ariely</i></li>
-          <li>The Joy of Cryptography <i>by Mike Rosulek</i></li>
-          <li>Story of my experiments with truth. <i>by Mahatma Gandhi</i></li>
-          <span x-show="expand">
-            
-            <li>Hacker's Delight <i>by Henry S. Warren, Jr.</i></li>
-            <li>The God Delusion <i>by Richard Dawkins</i></li>
-            <li>Journey to the west. Four volumes <i>by Anthony C. Yu</i></li>
-            <li>1984 <i>by George Orwell</i></li>
-          <li>Introduction to algorithms <i>by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein</i></li>
-          <li></li>
-          <li>The Economic Naturalist <i>by Robert H. Frank</i></li>
-          <li>'Surely, you're joking, Mr. Feynman!'' <i>by Richard Feynman</i></li>
-          <li>The Argumentative Indian<i>by Amartya Sen</i></li>
-          <li>The Arabian Nights <i>Translation, Andrew Lang</i></li>
-          <li>Sarva Darsana Samgraha, a 14th century book <i>by Madhavacharya</i></li>
-          <li>The First Three Minutes <i>Steven Weinberg</i></li>
-          <li>Gulamgiri <i>by Jyotirao Phule</i></li>
-          <li>Keepers of the Kalchakra <i>by Ashwin Sanghi</i></li>
-          <li>The Alchemist <i>Paulho Coelho</i></li>
-          <li>Bhagavad Gita as it is <i>by HDG AC Bhaktivedanta Swami Prabhupada</i></it></li>
-        </span>
-      </ul>
-      <button class="text-green-600 hover:underline mt-0 text-sm" x-show="!expand" @click="expand = true" >read more...</button>
-      <button class="text-green-600 hover:underline mt-0 text-sm" x-show="expand" @click="expand = false">...read less</button>
+        -->
     </div>
   </section>
-  -->
-  </main>
 
-  <footer class="bg-white dark:bg-slate-900 dark:text-gray-600 shadow p-4 text-center text-sm text-gray-500">
-    &copy; 2025 | Pushpendra Pal.
+  <!-- Hellow people -->
+  <section class="work-glass-gray-blur">
+    <div class="container two-col ">
+      <div>
+        
+        <h2 class="section-title will-reveal">Hello people</h2>
+
+        <p>These are some of the things I do </p>
+        <ul>
+          <li>Research on zero knowledge SNARKs and Proofs</li>
+          <li>Write zero knowledge SNARKs circuits</li>
+          <li>Implement new cryptographic primitives</li>
+        </ul>
+        <div style="margin-top:46px;">
+          <a href="#work" class="btn secondary" style="margin-left:8px;">See My Work</a>
+          <a href="#contact" class="btn">Email Me</a>
+        </div>
+        <p class="muted" style="margin-top:12px;">[Logos/credential snippet placeholder]</p>
+      
+      </div>
+      <div>
+        <div style="width:100%; height:260px; border-radius:12px; display:flex; align-items:center; justify-content:center;" class=" work-glass-color-blur parallax">
+          <img src="./bb.JPG" style="max-width: 100%; object-fit:cover; border-radius: 12px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Almae Matres -->
+  <section >
+    <div class="container">
+      <h2 class="section-title will-reveal">Almae Matres</h2>
+      <!--<p class="subhead will-reveal">Institutions </p> -->
+      <div class="cards" style="margin-top:16px;">
+        <div class="card work-glass-color-blur will-reveal"><h3>Indian Statistical Institute, Kolkata</h3><p>Master of Technology 2022-2024</p><p>Cryptology & Security</p></div>
+        <div class="card work-glass-color-blur will-reveal"><h3>Birla Institute of Technology & Science, Pilani</h3><p>Bachelor of Engineering 2016-2021</p><p>Electronics and Communications</p></div>
+        <div class="card work-glass-color-blur will-reveal"><h3>Birla Institute of Technology & Science, Pilani</h3><p>Master of Science(integrated) 2016-2021</p><p>Economics</p></div>
+      </div><!--
+      <a href="#process" class="btn  will-reveal" style="margin-top:16px; display:inline-block;">How It Works</a>-->
+    </div>
+  </section>
+
+  <!-- Res Interest -->
+  <section id="results" class="work-glass-color-blur">
+    <div class="container">
+      <h2 class="section-title will-reveal">Research interests</h2>
+      <div class="card work-glass-color-blur  will-reveal" style="margin-top:8px;">
+        <h3>Zero Knowledge Proofs and SNARKs</h3>
+        <p>Improving the prover time and verifer time complexities of existing SNARKs. </p>
+      </div>
+      <div class="kpis" style="margin-top:16px;">
+        <div class="kpi will-reveal"><div style="font-size:28px; font-weight:700;">[MPC]</div><div>Multi Party Computation</div></div>
+        <div class="kpi will-reveal"><div style="font-size:28px; font-weight:700;">[PQC]</div><div>Post quantum Cryptography with Isogenies</div></div>
+        <!--<div class="kpi will-reveal"><div style="font-size:28px; font-weight:700;">[Z]</div><div>[Leads Generated]</div></div>
+        <div class="kpi will-reveal"><div style="font-size:28px; font-weight:700;">[A%]</div><div>[More Page Views]</div></div>-->
+      </div>
+      <a href="#work" class="btn" style="margin-top:16px; display:inline-block;">See More Results</a>
+    </div>
+  </section>
+
+
+  <!-- Github -->
+  <section id="work" class="work-glass">
+    <div class="container">
+      <h2 class="section-title will-reveal">Selected Works</h2>
+      <div class="cards">
+        <div class="card  work-glass-color-blur will-reveal ">
+          <div style="height:140px; background:#eaeaea; border-radius:8px; margin-bottom:8px;">[Project Image]</div>
+          <h4>zk-SNARK proof</h4>
+          <p class="muted">Circom proof for Shamir Secret Sharing</p>
+          <a href="https://github.com/pushpadevl" class="btn secondary">View Project</a>
+        </div>
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:8px; margin-bottom:8px;" class="parallax"></div>
+          <h4>MPC protocol</h4>
+          <p class="muted">Implemented Multi-party computation protocol in Rust</p>
+          <a href="https://github.com/pushpadevl" class="btn secondary">View Project</a>
+        </div>
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:8px; margin-bottom:8px;" class="parallax">[Project Image]</div>
+          <h4>Bluff Co game</h4>
+          <p class="muted">A game of online bluff with underlying proofs</p>
+          <a href="https://github.com/pushpadevl" class="btn secondary">View Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process 
+  <section id="process" class="work-glass-color-blur">
+    <div class="container">
+      <h2 class="section-title will-reveal">[How We’ll Work Together]</h2>
+      <div class="cards">
+        <div class="card work-glass-color-blur will-reveal"><strong>1. Discovery</strong><p>Areas that need improvement</p></div>
+        <div class="card work-glass-color-blur will-reveal"><strong>2. Research</strong><p>Acquire working knowledge around it</p></div>
+        <div class="card work-glass-color-blur will-reveal"><strong>3. Implementation</strong><p>Implement a basic </p></div>
+        <div class="card work-glass-color-blur will-reveal"><strong>4. </strong><p>[Execution and QA]</p></div>
+        <div class="card work-glass-color-blur will-reveal"><strong>5. Measurement</strong><p>[Results, iteration, scale]</p></div>
+      </div>
+      <a href="#contact" class="btn" style="margin-top:16px; display:inline-block;">Start With a Quick Call</a>
+    </div>
+  </section> -->
+  <!-- My philosophy for research 
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="section-title">My philosophy</h2>
+      <div class="cards">
+        <div class="card will-reveal">
+          <p>“[Short testimonial quote]”</p>
+          <p class="muted">[Name], [Title], [Company]</p>
+        </div>
+        <div class="card will-reveal">
+          <p>“[Short testimonial quote]”</p>
+          <p class="muted">[Name], [Title], [Company]</p>
+        </div>
+        <div class="card will-reveal">
+          <p>“[Short testimonial quote]”</p>
+          <p class="muted">[Name], [Title], [Company]</p>
+        </div>
+      </div>
+      <div style="margin-top:16px;" class="muted">[Client Logos Row Placeholder]</div>
+    </div>
+  </section>
+-->
+  <!-- Extra currilcular -->
+  <section id="services" class="work-glass">
+    <div class="container will-reveal">
+      <h2 class="section-title will-reveal">Me Alternatives</h2>
+      <div class="cards">
+      <div class="cards will-reveal">
+        <div class="card work-glass-color-blur will-reveal">
+          <h3>Photographer</h3>
+          <p>Capturing instances of space-time to relish them later</p>
+          <a href="https://soloist.ai/mirrored" target="_blank" class="btn secondary">Visit [Mirrored]</a>
+        </div>
+        <div class="card  work-glass-color-blur will-reveal">
+          <h3>Calisthenics guy</h3>
+          <p>Although I do record myself for posture, they are private.</p>
+          <a href="#" class="btn secondary">So, just believe me</a>
+        </div>
+        <div class="card  work-glass-color-blur will-reveal">
+          <h3>Football freestyler</h3>
+          <p>Learnt it instead of attending boring classes in BITS</p>
+          <a href="#" class="btn secondary">Would record someday</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ 
+  <section id="faq" class="work-glass">
+    <div class="container">
+      <h2 class="section-title will-reveal">[Questions, Answered]</h2>
+      <details>
+        <summary>[How much does this cost?]</summary>
+        <p>[Transparent ranges or package overview placeholder]</p>
+      </details>
+      <details>
+        <summary>[How long does it take?]</summary>
+        <p>[Typical timelines placeholder]</p>
+      </details>
+      <details>
+        <summary>[What will I get?]</summary>
+        <p>[Deliverables placeholder]</p>
+      </details>
+      <details>
+        <summary>[What if it doesn’t work?]</summary>
+        <p>[Guarantees/approach placeholder]</p>
+      </details>
+    </div>
+  </section>
+-->
+  <!-- About -->
+  <section id="about" class="work-glass-color-blur">
+    <div class="hero  container two-col will-reveal">
+      <div class="parallax">
+        <h2 class="section-title">About Me</h2>
+        
+        <p>I am Pushpendra, a cryptogrpaphy student, a part-time photographer and the creator of this website. I do various other things to keep my life interesting but there is something omnipresent among all these things, it's the bug of curiosity and the will to always learn something new, not just academically but in every way my body allows. </p>
+        <p>To affix my academic standing, I have a Bachelors in Electronics and Communications Engineering, Master of Science in Economics and just recently, Master of Cryptology and Security. The first two degrees were offered by Birla Institute of Technology and Science Pilani, while the last one was offered by Indian Statistical Institute, Kolkata. Now I wouldn't say that the first choice of choosing an integrated course (at BITS) was the right decision, becasue with my marks, I could have gotten any 4 year course as well, but Computer Science. Although I did make up for my shortcomings and eventually did learn a lot of Computer science and later went to Kolkata to study Cryptology. I will take that as a win. At ISI, I had something I had never experienced before, the autonomy along with no financial worries and best of all, people who share a similar thought process as mine.</p>
+        <p>Apart from the academics, I do a lot of other stuff such as capturing photographs of basically anything that has naturally arrived on Earth. I don't discriminate and thus I don't put myself a specific clique of photographers. Another thing that excites me are acrobatics and plyometrics, which I think is the ultimate form of human body mastery. I don't workout to maintain my body or something, which many people is the motivation behind it; I do it just to see if I can. I do it for fun, it gives me the instant gratificaiton of doing somehting perfectly. I remember learning to kip up, and I had not learned it until the third year of college, when during a winter vacation, I started doing it daily for an hour, and I did it. The feeling of ecstasy was unforgettable. Then I learned how to do a roundabout with a football, and catch a football mid-air on my foot, and several other tricks. For this, I would keep doing this daily for about 10 hours and I eventually learned it. Currently, I have almost learned how to d a handstand, having done it for 7 seconds on camera. I learned to do the infamous Yogi-frog pose. There are several others.  </p>
+        <a href="#contact" class="btn">Let’s Talk</a>
+      </div>
+      <div>
+          <div style="width:100%; height:280px; background:#ddd; border-radius:12px;  align-items:center; justify-content:center;" class="work-glass-color-blur parallax hero-media will-reveal">
+            <img src="./r.JPG" style="max-width: 100%; object-fit:cover; border-radius: 12px;">
+        
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+<!--  <section>
+    <div class="container will-reveal">
+      <h2 class="section-title">[Turn Visitors Into Results]</h2>
+      <p class="subhead">[Short value reminder and what happens next]</p>
+      <a href="#contact" class="btn">Book a Free Consultation</a>
+      <a href="#contact" class="btn secondary" style="margin-left:8px;">Get a Free Audit</a>
+      <p class="muted" style="margin-top:8px;">[No obligation. 15 minutes.]</p>
+    </div>
+  </section>
+-->
+  <!-- Contact -->
+  <section id="contact"  >
+    <div class="container will-reveal">
+      <h2 class="section-title ">Get in Touch</h2>
+      <div>
+        <form>
+          <label>Name<br/><input type="text" placeholder="[आपका नाम] Your name" style="width:70%; padding:10px; margin:6px 0;"></label> <br>
+          <label>Email<br/><input type="email" placeholder="[you@example.com]" style="width:70%; padding:10px; margin:6px 0;"></label><br>
+          <label>Company<br/><input type="text" placeholder="[Company]" style="width:70%; padding:10px; margin:6px 0;"></label><br>
+          <label>Website<br/><input type="url" placeholder="[https://...](https://...)" style="width:70%; padding:10px; margin:6px 0;"></label><br>
+          
+          <label>Message<br/><textarea placeholder="और बताइए [Tell me more...]" style="width:70%; padding:10px; margin:6px 0; height:120px;"></textarea></label><br>
+          <button class="btn" type="submit">Send</button>
+        </form>
+      </div>
+      
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px,1fr));">
+        <div>
+          <div class="logo">Pal Pushpendra</div>
+          <p class="muted">Cryptographic Researcher</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <p><a href="#about">About</a> · <a href="#services">Services</a> · <a href="#work">Work</a> · <a href="#results">Results</a> · <a href="#testimonials">Testimonials</a> · <a href="#process">Process</a> · <a href="#faq">FAQ</a> · <a href="#contact">Contact</a></p>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:16px;">© [2025] [Pal Pushpendra]. All rights reserved.</p>
+    </div>
   </footer>
+</div>
+ <div class="notch-buttons"> 
+  <button class="notch-btn notch-1"><a target="_blank" href="https://pushpadevl.github.io/fletore">CRYPTO</a></button> 
+  <button class="notch-btn notch-2"><a href="https://soloist.ai/mirrored" target="_blank">MIRRORED</a></button> 
+</div> 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+<!--<script src="toggleDarkMode.js"></script>
+<script>
+  (() => {
+    const root = document.documentElement;
+    const mq = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Optional: only auto-switch if no explicit user choice is stored
+    const hasUserChoice = () => localStorage.getItem('theme') === 'dark' || localStorage.getItem('theme') === 'light';
+    
+    const applySystemScheme = () => {
+      if (hasUserChoice()) return; // user override wins
+      root.classList.toggle('dark-mode', mq.matches);
+      root.classList.toggle('light-mode', !mq.matches);
+  };
+  
+  // Initial apply so the DOM reflects current system preference
+  applySystemScheme();
+
+  // Respond live to changes (no reload needed)
+  mq.addEventListener('change', applySystemScheme);
+})();
+</script>
+-->
+<script src="app.js"></script>
+<script src="parallax.js"></script>
+
+<script src="herosection.js"> 
+</script>
 </body>
 </html>
