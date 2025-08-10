@@ -39,7 +39,7 @@ body {
   }
 }
 */
-p {font-size: 12px;  text-align: justify;
+p {font-size: 14px;  text-align: justify;
   text-justify: inter-word;
   word-wrap: break-word;
   hyphens: auto;

@@ -8,8 +8,9 @@
   
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script> <!--EmailJS-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
@@ -36,6 +37,7 @@
   <!-- Hero -->
    <div id="app">
 
+    <!-- Quote-->
    <section class="work-glass will-reveal" style="position:relative; overflow: hidden;">
 
     <div class="container" style="position:relative; z-index:2;">
@@ -214,11 +216,11 @@
           <a href="https://soloist.ai/mirrored" target="_blank" class="btn secondary">Mirrored</a>
         </div>
         <div class="card  work-glass-color-blur will-reveal">
-          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/cali.png" style="width:100%; height: 100%; object-fit:fill; border-radius: 8px;">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/chess.png" style="width:100%; height: 100%; object-fit:fill; border-radius: 8px;">
           </div>
-          <h3>Calisthenics guy</h3>
-          <p>Although I do record myself for posture, they are private.</p>
-          <a href="#" class="btn secondary">So, just believe me</a>
+          <h3>Chess beginner</h3>
+          <p>Started playing chess recently on Chess.com. Find me here</p>
+          <a href="https://www.chess.com/member/attahbayra" class="btn secondary">Chesscom</a>
         </div>
         <div class="card  work-glass-color-blur will-reveal">
           <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/duo.png" style="width:100%; height: 100%; object-fit:fill; border-radius: 8px;">
@@ -228,25 +230,33 @@
           <a href="http://www.duolingo.com/profile/Mul318026?%E2%80%A6" class="btn secondary">Duolingo</a>
         </div>
         <div class="card  work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/cali.png" style="width:100%; height: 100%; object-fit:fill; border-radius: 8px;">
+          </div>
+          <h3>Athletics</h3>
+          <p>Workouts including running, calisthenics and plyometrics.</p>
+          <a href="https://www.strava.com/athletes/90401659" class="btn secondary">Strava</a>
+        </div>
+        <div class="card  work-glass-color-blur will-reveal">
           <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/mines.png" style="width:100%; height: 100%; object-fit:fill; border-radius: 8px;">
           </div>
           <h3>Minesweeper videos</h3>
           <p>Had played a lot of Minesweeper, still wouldn't mind getting at it again.</p>
           <a href="https://www.youtube.com/@amul9979" class="btn secondary">Youtube</a>
         </div>
-        <div class="card  work-glass-color-blur will-reveal">
-          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/chess.png" style="width:100%; height: 100%; object-fit:fill; border-radius: 8px;">
-          </div>
-          <h3>Chess beginner</h3>
-          <p>Started playing chess recently on Chess.com. Find me here</p>
-          <a href="https://www.youtube.com/@amul9979" class="btn secondary">Chesscom</a>
-        </div>
+        
         <div class="card  work-glass-color-blur will-reveal">
           <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/foot.png" style="width:100%; height: 100%; object-fit:fill; border-radius: 8px;">
           </div>
           <h3>Football freestyler</h3>
           <p>Learnt it instead of attending boring classes in BITS</p>
-          <a href="https://www.chess.com/member/attahbayra" class="btn secondary">Would record someday</a>
+          <a href="" class="btn secondary">Would record someday</a>
+        </div>
+        <div class="card  work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/badm.png" style="width:100%; height: 100%; object-fit:fill; border-radius: 8px;">
+          </div>
+          <h3>Badminton rookie</h3>
+          <p>The only sports I learned at ISI</p>
+          <a href="" class="btn secondary">Still a rookie</a>
         </div>
       </div>
     </div>
@@ -300,13 +310,13 @@
     <div class="container will-reveal">
       <h2 class="section-title ">Get in Touch</h2>
       <div>
-        <form>
-          <label>Name<br/><input type="text" placeholder="[आपका नाम] Your name" style="width:70%; padding:10px; margin:6px 0;"></label> <br>
-          <label>Email<br/><input type="email" placeholder="[you@example.com]" style="width:70%; padding:10px; margin:6px 0;"></label><br>
-          <label>Company<br/><input type="text" placeholder="[Company]" style="width:70%; padding:10px; margin:6px 0;"></label><br>
-          <label>Website<br/><input type="url" placeholder="[https://...](https://...)" style="width:70%; padding:10px; margin:6px 0;"></label><br>
+        <form id="contact-form">
+          <label>Name<br/><input name="name" type="text" placeholder="Your name" style="width:70%; padding:10px; margin:6px 0;"></label> <br>
+          <label>Email<br/><input name="email" type="email" placeholder="[you@example.com]" style="width:70%; padding:10px; margin:6px 0;"></label><br>
+          <label>Company<br/><input name="company" type="text" placeholder="[Company]" style="width:70%; padding:10px; margin:6px 0;"></label><br>
+          <label>Website<br/><input name="website" type="url" placeholder="[https://...]" style="width:70%; padding:10px; margin:6px 0;"></label><br>
           
-          <label>Message<br/><textarea placeholder="और बताइए [Tell me more...]" style="width:70%; padding:10px; margin:6px 0; height:120px;"></textarea></label><br>
+          <label>Message<br/><textarea name="message"  placeholder="[Message...]" style="width:70%; padding:10px; margin:6px 0; height:120px;"></textarea></label><br>
           <button class="btn" type="submit">Send</button>
         </form>
       </div>
@@ -357,5 +367,25 @@
 
 <script src="./JS/herosection.js"> 
 </script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("TxU9KchOcbajkf0uR");
+  })();
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submit behavior
+
+  emailjs.sendForm('service_lzvzrwi', 'template_2ce6mkq', this)
+    .then(function() {
+      alert('Email sent successfully!');
+      document.getElementById('contact-form').reset(); // Clear the form after success
+    }, function(error) {
+      alert('Failed to send email. Please try again later.');
+      console.error('EmailJS error:', error);
+    });
+});
+
+</script>
+
 </body>
 </html>
