@@ -76,16 +76,16 @@ p {font-size: 12px;  text-align: justify;
   background: rgba(1, 1, 1, 0.15); /* translucent */
   border: none; /* subtle edge for contrast */
   /* Blur the backdrop (area behind the section) */
-  -webkit-backdrop-filter: blur(8px) brightness(90%) saturate(150%) contrast(100%);
-  backdrop-filter: blur(8px) brightness(70%) saturate(150%) contrast(100%); 
+  -webkit-backdrop-filter: blur(10px) brightness(90%) saturate(150%) contrast(100%);
+  backdrop-filter: blur(10px) brightness(70%) saturate(150%) contrast(100%); 
   
 }
 .work-glass-gray-blur { /* blur  */
   background: rgba(1, 1, 1, 0.15); /* translucent */
   border: none; /* subtle edge for contrast */
   /* Blur the backdrop (area behind the section) */
-  -webkit-backdrop-filter: blur(8px) brightness(40%) saturate(5%) contrast(100%);
-  backdrop-filter: blur(8px) brightness(40%) saturate(5%) contrast(100%); 
+  -webkit-backdrop-filter: blur(10px) brightness(40%) saturate(5%) contrast(100%);
+  backdrop-filter: blur(10px) brightness(40%) saturate(5%) contrast(100%); 
   
 }
 
@@ -255,7 +255,7 @@ z-index: 1000; /* above page content */
 
 .notch-btn {
  position: fixed;
- height:110px;
+ height:107px;
   right: 0px;
   z-index: 1000;
   display: inline-block;
@@ -266,7 +266,7 @@ z-index: 1000; /* above page content */
   text-decoration: none;
   font-weight: 400;
   border: none;
-  border-radius: 0 0 0 12px;
+  border-radius: 0 0 0 15px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s;
