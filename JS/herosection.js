@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 const el = document.getElementById('typewriter');
-const text = 'The best way to predict future is to invent it.';
+const text = '"The best way to predict the future is to invent it."';
 const speed = 75; // ms per character
 const afterPause = 300; // optional pause after finishing
 

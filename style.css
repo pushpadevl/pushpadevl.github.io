@@ -183,15 +183,14 @@ section {
 
     .grid { display:grid; gap:24px; }
     .btn { display:inline-block; padding:12px 20px; background:#186d11; color:#f1f1f1; text-decoration:none; border-radius:8px; }
-    .btn.secondary { background:#186d11; color:#f1f1f1; }
+    .btn.secondary { background:#186d11; color:#f1f1f1;}
     .hero,
 #about,
-#work,
-#services,
-#testimonials,
-#process,
-#results,
-#faq,
+#github,
+#research,
+#intro,
+#recreation,
+#almaematres,
 #contact {
   min-height: 75vh;
   display: flex;
@@ -209,7 +208,7 @@ section {
     footer { background:#0f0f10; color:#eee; }
     .muted { color:#6b6b6b; }
     .section-title { font-size:32px; margin-bottom:16px; }
-    .subhead { font-size:28px; color:#444; }
+    .subhead { font-size:28px; color:#0e5008; }
     .kpis { display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:16px; }
     .kpi { color:#fff; border-radius:12px; padding:16px; text-align:center; }
     .two-col { display:grid; grid-template-columns: 1.2fr 1fr; gap:24px; }
@@ -263,7 +262,6 @@ z-index: 1000; /* above page content */
   color: white;
   
   background: #186d11; /* green */
-  text-decoration: none;
   font-weight: 400;
   border: none;
   border-radius: 0 0 0 15px;
@@ -303,5 +301,5 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
   top: calc(48%) ;     /* 120px = space between them */
   transform: translateY(-5%);
 }
-.notch-btn a{ text-decoration: none;}
+.notch-btn a{ color: white;}
 /* For circ.js */
