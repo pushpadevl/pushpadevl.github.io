@@ -39,7 +39,12 @@ body {
   }
 }
 */
-p {font-size: 12px;}
+p {font-size: 12px;  text-align: justify;
+  text-justify: inter-word;
+  word-wrap: break-word;
+  hyphens: auto;
+
+}
 /* Motion helpers */
 .will-reveal { opacity:0; transform: translateY(24px); }
 .revealed { opacity:1 !important; transform:none !important; transition:opacity .9s ease, transform .9s ease; }
@@ -206,7 +211,7 @@ section {
     .section-title { font-size:32px; margin-bottom:16px; }
     .subhead { font-size:28px; color:#444; }
     .kpis { display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:16px; }
-    .kpi { background:#111; color:#fff; border-radius:12px; padding:16px; text-align:center; }
+    .kpi { color:#fff; border-radius:12px; padding:16px; text-align:center; }
     .two-col { display:grid; grid-template-columns: 1.2fr 1fr; gap:24px; }
     @media (max-width: 880px) {
       .two-col { grid-template-columns: 1fr; }
@@ -250,26 +255,26 @@ z-index: 1000; /* above page content */
 
 .notch-btn {
  position: fixed;
- height:150px;
-  right: 1px;
+ height:110px;
+  right: 0px;
   z-index: 1000;
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   color: white;
   
   background: #186d11; /* green */
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
-  border-radius: 8px 0 0 8px;
+  border-radius: 0 0 0 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s;
 
   /* New vertical text style */
-  writing-mode: vertical-lr;
+  writing-mode:sideways-lr;
   /*text-orientation: upright;*/
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
 }
 
 .notch-btn:hover {
@@ -284,17 +289,19 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 /* Position the first (top) button */
 .notch-1 {
-  top: 35%;                  /* adjust as needed */
+  top: 24%;                  /* adjust as needed */
   transform: translateY(-5%);
 }
 
 /* Position the second (below) button */
 .notch-2 {
-  bottom: calc(35% );     /* 120px = space between them */
+  top: calc(36%);     /* 120px = space between them */
   transform: translateY(-5%);
 }
-.notch-btn a {
-  text-decoration: none !important;
-}
 
+.notch-3 {
+  top: calc(48%) ;     /* 120px = space between them */
+  transform: translateY(-5%);
+}
+.notch-btn a{ text-decoration: none;}
 /* For circ.js */
