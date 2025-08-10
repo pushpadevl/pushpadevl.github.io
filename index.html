@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pal Pushpendra</title>
   <meta name="description" content="[One-sentence summary of who you help and what results you deliver]" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <!-- Add your font and CSS links here -->
    <link rel="stylesheet" href="style.css">
   
 </head>
@@ -17,12 +19,12 @@
     <div class="header-inner">
       <div class="logo">Pushpendra Pal</div>
       <nav>
+        <a href="#intro">Intro</a>
+        <a href="#almaematres">Almae Matres</a>
+        <a href="#research">Research</a>
+        <a href="#github">Github</a>
+        <a href="#recreation">Recreation</a>
         <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#results">Cryptography</a>
-        <a href="#testimonials">Github</a>
-        <a href="#process">LinkedIn</a>
-        <a href="#services">Photography</a>
         <!--<button id="theme-toggle" aria-pressed="false" class="btn secondary" title="[Toggle theme]">Toggle theme</button>
       -->
         <a href="#contact" class="btn" style="margin-left:12px;">Let's Talk</a>
@@ -47,8 +49,8 @@
     </div>
   </section>
 
-  <!-- Hellow people -->
-  <section class="work-glass-gray-blur">
+  <!-- Intro  -->
+  <section id="intro" class="work-glass-gray-blur">
     <div class="container two-col ">
       <div>
         
@@ -61,22 +63,22 @@
           <li>Implement new cryptographic primitives</li>
         </ul>
         <div style="margin-top:46px;">
-          <a href="#work" class="btn secondary" style="margin-left:8px;">See My Work</a>
+          <a href="#github" class="btn secondary" style="margin-left:8px;">See My Work</a>
           <a href="#contact" class="btn">Email Me</a>
         </div>
-        <p class="muted" style="margin-top:12px;">[Logos/credential snippet placeholder]</p>
+        <!--<p class="muted" style="margin-top:12px;">[Logos/credential snippet placeholder]</p>-->
       
       </div>
       <div>
         <div style="width:100%; height:260px; border-radius:12px; display:flex; align-items:center; justify-content:center;" class=" work-glass-color-blur parallax">
-          <img src="./bb.JPG" style="max-width: 100%; object-fit:cover; border-radius: 12px;">
+          <img src="./IMG/bb.JPG" style="max-width: 100%; object-fit:cover; border-radius: 12px;">
         </div>
       </div>
     </div>
   </section>
 
   <!-- Almae Matres -->
-  <section >
+  <section id="almaematres">
     <div class="container">
       <h2 class="section-title will-reveal">Almae Matres</h2>
       <!--<p class="subhead will-reveal">Institutions </p> -->
@@ -89,114 +91,168 @@
     </div>
   </section>
 
-  <!-- Res Interest -->
-  <section id="results" class="work-glass-color-blur">
+  <!-- Research Interest -->
+  <section id="research" class="work-glass-color-blur">
     <div class="container">
       <h2 class="section-title will-reveal">Research interests</h2>
       <div class="card work-glass-color-blur  will-reveal" style="margin-top:8px;">
-        <h3>Zero Knowledge Proofs and SNARKs</h3>
-        <p>Improving the prover time and verifer time complexities of existing SNARKs. </p>
+        <h3><div style="font-size:22px; font-weight:500;">Zero Knowledge Proofs and SNARKs</div></h3>
+        <p style="font-size:16px; font-weight:300;">Improving the prover time and verifer time complexities of existing SNARKs. </p>
       </div>
       <div class="kpis" style="margin-top:16px;">
-        <div class="kpi will-reveal"><div style="font-size:28px; font-weight:700;">[MPC]</div><div>Multi Party Computation</div></div>
-        <div class="kpi will-reveal"><div style="font-size:28px; font-weight:700;">[PQC]</div><div>Post quantum Cryptography with Isogenies</div></div>
+        <div class="kpi will-reveal"><div style="font-size:22px; font-weight:500;">[MPC]</div><div>Multi Party Computation</div></div>
+        <div class="kpi will-reveal"><div style="font-size:22px; font-weight:500;">[PQC]</div><div>Post quantum Cryptography with Isogenies</div></div>
         <!--<div class="kpi will-reveal"><div style="font-size:28px; font-weight:700;">[Z]</div><div>[Leads Generated]</div></div>
         <div class="kpi will-reveal"><div style="font-size:28px; font-weight:700;">[A%]</div><div>[More Page Views]</div></div>-->
       </div>
-      <a href="#work" class="btn" style="margin-top:16px; display:inline-block;">See More Results</a>
+      <a href="#github" class="btn" style="margin-top:16px; display:inline-block;">Visit projects</a>
     </div>
   </section>
-
 
   <!-- Github -->
-  <section id="work" class="work-glass">
+  <section id="github" class="work-glass">
     <div class="container">
-      <h2 class="section-title will-reveal">Selected Works</h2>
+      <h2 class="section-title will-reveal">Github project highlights</h2>
       <div class="cards">
-        <div class="card  work-glass-color-blur will-reveal ">
-          <div style="height:140px; background:#eaeaea; border-radius:8px; margin-bottom:8px;">[Project Image]</div>
+
+
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+        </div>
+          <h4>Fletore</h4>
+          <p class="muted">Collection of cryptography notes.</p>
+          <a href="https://github.com/pushpadevl/fletore" class="btn secondary">View Project</a>
+        </div>
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+        </div>
+          <h4>Circom puzzles</h4>
+          <p class="muted">Completed puzzles of circom zkSNARK compiler</p>
+          <a href="https://github.com/pushpadevl/zero-knowledge-puzzles" class="btn secondary">View Project</a>
+        </div>
+
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+          </div>
           <h4>zk-SNARK proof</h4>
           <p class="muted">Circom proof for Shamir Secret Sharing</p>
-          <a href="https://github.com/pushpadevl" class="btn secondary">View Project</a>
+          <a href="https://github.com/pushpadevl/circomlib" class="btn secondary">View Project</a>
         </div>
         <div class="card work-glass-color-blur will-reveal">
-          <div style="height:140px; background:#eaeaea; border-radius:8px; margin-bottom:8px;" class="parallax"></div>
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+        </div>
           <h4>MPC protocol</h4>
           <p class="muted">Implemented Multi-party computation protocol in Rust</p>
-          <a href="https://github.com/pushpadevl" class="btn secondary">View Project</a>
+          <a href="https://github.com/pushpadevl/BGW_SSS" class="btn secondary">View Project</a>
         </div>
         <div class="card work-glass-color-blur will-reveal">
-          <div style="height:140px; background:#eaeaea; border-radius:8px; margin-bottom:8px;" class="parallax">[Project Image]</div>
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+        </div>
           <h4>Bluff Co game</h4>
           <p class="muted">A game of online bluff with underlying proofs</p>
-          <a href="https://github.com/pushpadevl" class="btn secondary">View Project</a>
+          <a href="https://github.com/pushpadevl/bluff_co" class="btn secondary">View Project</a>
         </div>
+
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+        </div>
+          <h4>Solana</h4>
+          <p class="muted">Making NFTs on Solana blockchain.</p>
+          <a href="https://github.com/pushpadevl/solana_tuts" class="btn secondary">View Project</a>
+        </div>
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+        </div>
+          <h4>BLS signature</h4>
+          <p class="muted">Proof of concept of BLS signature.</p>
+          <a href="https://github.com/pushpadevl/bls_signature_poc" class="btn secondary">View Project</a>
+        </div>
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+        </div>
+          <h4>Fast Fourier Transform</h4>
+          <p class="muted">Implementation in C and Java</p>
+          <a href="https://github.com/pushpadevl/DIF-FFT" class="btn secondary">View Project</a>
+        </div>
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+          </div>
+          <h4>CP algorithms</h4>
+          <p class="muted">A few important competitive programming algorithms.</p>
+          <a href="https://github.com/pushpadevl/" class="btn secondary">View Project</a>
+        </div>
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+        </div>
+          <h4>Quantum algorithms</h4>
+          <p class="muted">Implementation of a few quantum algorithms.</p>
+          <a href="https://github.com/pushpadevl/quantum_algos" class="btn secondary">View Project</a>
+        </div>
+        <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/code.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+        </div>
+          <h4>Cryptographic primitives</h4>
+          <p class="muted">Implementation of SHA1 and AES-128,192,256 in C with CBC ECB and CTR modes</p>
+          <a href="https://github.com/pushpadevl/aes_c" class="btn secondary">View Project</a>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Process 
-  <section id="process" class="work-glass-color-blur">
-    <div class="container">
-      <h2 class="section-title will-reveal">[How We’ll Work Together]</h2>
-      <div class="cards">
-        <div class="card work-glass-color-blur will-reveal"><strong>1. Discovery</strong><p>Areas that need improvement</p></div>
-        <div class="card work-glass-color-blur will-reveal"><strong>2. Research</strong><p>Acquire working knowledge around it</p></div>
-        <div class="card work-glass-color-blur will-reveal"><strong>3. Implementation</strong><p>Implement a basic </p></div>
-        <div class="card work-glass-color-blur will-reveal"><strong>4. </strong><p>[Execution and QA]</p></div>
-        <div class="card work-glass-color-blur will-reveal"><strong>5. Measurement</strong><p>[Results, iteration, scale]</p></div>
-      </div>
-      <a href="#contact" class="btn" style="margin-top:16px; display:inline-block;">Start With a Quick Call</a>
-    </div>
-  </section> -->
-  <!-- My philosophy for research 
-  <section id="testimonials">
-    <div class="container">
-      <h2 class="section-title">My philosophy</h2>
-      <div class="cards">
-        <div class="card will-reveal">
-          <p>“[Short testimonial quote]”</p>
-          <p class="muted">[Name], [Title], [Company]</p>
-        </div>
-        <div class="card will-reveal">
-          <p>“[Short testimonial quote]”</p>
-          <p class="muted">[Name], [Title], [Company]</p>
-        </div>
-        <div class="card will-reveal">
-          <p>“[Short testimonial quote]”</p>
-          <p class="muted">[Name], [Title], [Company]</p>
-        </div>
-      </div>
-      <div style="margin-top:16px;" class="muted">[Client Logos Row Placeholder]</div>
-    </div>
-  </section>
--->
-  <!-- Extra currilcular -->
-  <section id="services" class="work-glass">
+  <!-- Recreation Extra currilcular -->
+  <section id="recreation" class="work-glass">
     <div class="container will-reveal">
-      <h2 class="section-title will-reveal">Me Alternatives</h2>
+      <h2 class="section-title will-reveal">Alt Identities</h2>
       <div class="cards">
       <div class="cards will-reveal">
         <div class="card work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/cam.jpg" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+          </div>
           <h3>Photographer</h3>
           <p>Capturing instances of space-time to relish them later</p>
-          <a href="https://soloist.ai/mirrored" target="_blank" class="btn secondary">Visit [Mirrored]</a>
+          <a href="https://soloist.ai/mirrored" target="_blank" class="btn secondary">Mirrored</a>
         </div>
         <div class="card  work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/cali.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+          </div>
           <h3>Calisthenics guy</h3>
           <p>Although I do record myself for posture, they are private.</p>
           <a href="#" class="btn secondary">So, just believe me</a>
         </div>
         <div class="card  work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/duo.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+          </div>
+          <h3>Multi-lingual</h3>
+          <p>Have learnt a bit of Spanish, Arabic, Urdu, Korean, Russian. It's Arabic and Dutch nowadays.</p>
+          <a href="http://www.duolingo.com/profile/Mul318026?%E2%80%A6" class="btn secondary">Duolingo</a>
+        </div>
+        <div class="card  work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/mines.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+          </div>
+          <h3>Minesweeper videos</h3>
+          <p>Had played a lot of Minesweeper, still wouldn't mind getting at it again.</p>
+          <a href="https://www.youtube.com/@amul9979" class="btn secondary">Youtube</a>
+        </div>
+        <div class="card  work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/chess.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+          </div>
+          <h3>Chess beginner</h3>
+          <p>Started playing chess recently on Chess.com. Find me here</p>
+          <a href="https://www.youtube.com/@amul9979" class="btn secondary">Chesscom</a>
+        </div>
+        <div class="card  work-glass-color-blur will-reveal">
+          <div style="height:140px; background:#eaeaea; border-radius:9px; margin-bottom:8px;" class="parallax"><img src="./IMG/foot.png" style="max-height: 100%; object-fit:cover; border-radius: 8px;">
+          </div>
           <h3>Football freestyler</h3>
           <p>Learnt it instead of attending boring classes in BITS</p>
-          <a href="#" class="btn secondary">Would record someday</a>
+          <a href="https://www.chess.com/member/attahbayra" class="btn secondary">Would record someday</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ 
+  <!-- keep this, don't delete, might use later FAQ 
   <section id="faq" class="work-glass">
     <div class="container">
       <h2 class="section-title will-reveal">[Questions, Answered]</h2>
@@ -218,38 +274,27 @@
       </details>
     </div>
   </section>
--->
+
   <!-- About -->
   <section id="about" class="work-glass-color-blur">
     <div class="hero  container two-col will-reveal">
       <div class="parallax">
         <h2 class="section-title">About Me</h2>
         
-        <p>I am Pushpendra, a cryptogrpaphy student, a part-time photographer and the creator of this website. I do various other things to keep my life interesting but there is something omnipresent among all these things, it's the bug of curiosity and the will to always learn something new, not just academically but in every way my body allows. </p>
-        <p>To affix my academic standing, I have a Bachelors in Electronics and Communications Engineering, Master of Science in Economics and just recently, Master of Cryptology and Security. The first two degrees were offered by Birla Institute of Technology and Science Pilani, while the last one was offered by Indian Statistical Institute, Kolkata. Now I wouldn't say that the first choice of choosing an integrated course (at BITS) was the right decision, becasue with my marks, I could have gotten any 4 year course as well, but Computer Science. Although I did make up for my shortcomings and eventually did learn a lot of Computer science and later went to Kolkata to study Cryptology. I will take that as a win. At ISI, I had something I had never experienced before, the autonomy along with no financial worries and best of all, people who share a similar thought process as mine.</p>
-        <p>Apart from the academics, I do a lot of other stuff such as capturing photographs of basically anything that has naturally arrived on Earth. I don't discriminate and thus I don't put myself a specific clique of photographers. Another thing that excites me are acrobatics and plyometrics, which I think is the ultimate form of human body mastery. I don't workout to maintain my body or something, which many people is the motivation behind it; I do it just to see if I can. I do it for fun, it gives me the instant gratificaiton of doing somehting perfectly. I remember learning to kip up, and I had not learned it until the third year of college, when during a winter vacation, I started doing it daily for an hour, and I did it. The feeling of ecstasy was unforgettable. Then I learned how to do a roundabout with a football, and catch a football mid-air on my foot, and several other tricks. For this, I would keep doing this daily for about 10 hours and I eventually learned it. Currently, I have almost learned how to d a handstand, having done it for 7 seconds on camera. I learned to do the infamous Yogi-frog pose. There are several others.  </p>
+        <p>I am Pushpendra, a cryptogrpaphy student, a part-time photographer and the creator of this website. I do various other things to keep my life interesting but there is something omnipresent among all of them; it's the bug of curiosity and the will to always learn something new, not just academically but in every way my body and brain allows. </p>
+        <p>To affix my academic standing, I have a Bachelors in Electronics and Communications Engineering, Master of Science in Economics and just recently received a Master of Technology in Cryptology and Security. The first two degrees were offered by Birla Institute of Technology and Science Pilani, while the last one was offered by Indian Statistical Institute, Kolkata. At ISI, I experienced something I had never experienced before, the autonomy along with no financial worries and best of all, people who share a similar thought process as mine.</p>
+        <!--<p>Apart from the academics, I do a lot of other stuff such as capturing photographs of basically anything that has naturally arrived on Earth. I don't discriminate and thus I don't put myself a specific clique of photographers. Another thing that excites me are acrobatics and plyometrics, which I think is the ultimate form of human body mastery. I don't workout to maintain my body or something, which many people is the motivation behind it; I do it just to see if I can. I do it for fun, it gives me the instant gratificaiton of doing somehting perfectly. I remember learning to kip up, and I had not learned it until the third year of college, when during a winter vacation, I started doing it daily for an hour, and I did it. The feeling of ecstasy was unforgettable. Then I learned how to do a roundabout with a football, and catch a football mid-air on my foot, and several other tricks. For this, I would keep doing this daily for about 10 hours and I eventually learned it. Currently, I have almost learned how to d a handstand, having done it for 7 seconds on camera. I learned to do the infamous Yogi-frog pose. There are several others. </p>-->
         <a href="#contact" class="btn">Let’s Talk</a>
       </div>
       <div>
-          <div style="width:100%; height:280px; background:#ddd; border-radius:12px;  align-items:center; justify-content:center;" class="work-glass-color-blur parallax hero-media will-reveal">
-            <img src="./r.JPG" style="max-width: 100%; object-fit:cover; border-radius: 12px;">
+          <div style="width:100%; height:280px; background:#ddd; border-radius:13px;  align-items:center; justify-content:center;" class="work-glass-color-blur parallax hero-media will-reveal">
+            <img src="./IMG/r.JPG" style="max-width: 100%; object-fit:cover; border-radius: 12px;">
         
           </div>
         </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-<!--  <section>
-    <div class="container will-reveal">
-      <h2 class="section-title">[Turn Visitors Into Results]</h2>
-      <p class="subhead">[Short value reminder and what happens next]</p>
-      <a href="#contact" class="btn">Book a Free Consultation</a>
-      <a href="#contact" class="btn secondary" style="margin-left:8px;">Get a Free Audit</a>
-      <p class="muted" style="margin-top:8px;">[No obligation. 15 minutes.]</p>
-    </div>
-  </section>
--->
   <!-- Contact -->
   <section id="contact"  >
     <div class="container will-reveal">
@@ -277,52 +322,28 @@
           <p class="muted">Cryptographic Researcher</p>
         </div>
         <div>
-          <h4>Explore</h4>
-          <p><a href="#about">About</a> · <a href="#services">Services</a> · <a href="#work">Work</a> · <a href="#results">Results</a> · <a href="#testimonials">Testimonials</a> · <a href="#process">Process</a> · <a href="#faq">FAQ</a> · <a href="#contact">Contact</a></p>
+          <p>
+
+            <a href="#about">About</a> . <a href="#github">Github</a> . <a href="https://pushpadevl.github.io/fletore">Fletore [Cryptography]</a> . <a href="https://soloist.ai/mirrored">Mirrored [Photography]</a> . <a href="#contact">Contact</a></p>
+          </p>
+            
         </div>
-        <div>
-          <h4>Legal</h4>
-          <p><a href="#">Privacy</a> · <a href="#">Terms</a></p>
-        </div>
+        
       </div>
-      <p class="muted" style="margin-top:16px;">© [2025] [Pal Pushpendra]. All rights reserved.</p>
+      <p class="muted" style="margin-top:16px;">© 2025 [Pal Pushpendra]. All rights reserved.</p>
     </div>
   </footer>
 </div>
  <div class="notch-buttons"> 
-  <button class="notch-btn notch-1"><a target="_blank" href="https://pushpadevl.github.io/fletore">CRYPTO</a></button> 
-  <button class="notch-btn notch-2"><a href="https://soloist.ai/mirrored" target="_blank">MIRRORED</a></button> 
+  <button class="notch-btn notch-1"><a href="https://github.com/pushpadevl" target="_blank">GitHub</a></button> 
+  <button class="notch-btn notch-2"><a target="_blank" href="https://pushpadevl.github.io/fletore">CRYPTO</a></button> 
+  <button class="notch-btn notch-3"><a href="https://soloist.ai/mirrored" target="_blank">MIRRORED</a></button> 
 </div> 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-<!--<script src="toggleDarkMode.js"></script>
-<script>
-  (() => {
-    const root = document.documentElement;
-    const mq = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Optional: only auto-switch if no explicit user choice is stored
-    const hasUserChoice = () => localStorage.getItem('theme') === 'dark' || localStorage.getItem('theme') === 'light';
-    
-    const applySystemScheme = () => {
-      if (hasUserChoice()) return; // user override wins
-      root.classList.toggle('dark-mode', mq.matches);
-      root.classList.toggle('light-mode', !mq.matches);
-  };
-  
-  // Initial apply so the DOM reflects current system preference
-  applySystemScheme();
+<script src="./JS/app.js"></script>
+<script src="./JS/parallax.js"></script>
 
-  // Respond live to changes (no reload needed)
-  mq.addEventListener('change', applySystemScheme);
-})();
-</script>
--->
-<script src="app.js"></script>
-<script src="parallax.js"></script>
-
-<script src="herosection.js"> 
+<script src="./JS/herosection.js"> 
 </script>
 </body>
 </html>
