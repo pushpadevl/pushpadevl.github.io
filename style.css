@@ -303,3 +303,72 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 .notch-btn a{ color: white; text-decoration: none;}
 /* For circ.js */
+
+
+/* Rotating picture card */
+.rotatingcard {
+  margin-top: 20%;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rotatingcard img {
+  
+  max-width:100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.rotatingcard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.rotatingcard__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rotatingcard:hover .rotatingcard__content {
+  transform: rotateX(0deg);
+}
+
+.rotatingcard__title {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.rotatingcard:hover img {
+  transform:rotateX(100deg); /* at 90, lying placard*/
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  
+}
+
+.rotatingcard__description {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
