@@ -95,13 +95,15 @@ p {font-size: 14px;  text-align: justify;
     background: rgba(1,1,1,.15);
   }
 }
+/*
 .image {
     max-width: 100%;
   max-height: 100%;
   
   object-fit: contain;
-  display: block; /* optional: removes inline-gap issues */
+  display: block; /* optional: removes inline-gap issues 
 }
+*/
 /* Option A: Image background on the layer itself */
 .site-bg {
   background-image: url('./git.JPG');
@@ -140,7 +142,7 @@ p {font-size: 14px;  text-align: justify;
   100% { background-position: -200% 0; }
 }
 
-/* Magnetic button */
+/* Magnetic button 
 .btn.magnetic { position: relative; overflow: hidden; transform: translateZ(0); }
 .btn.magnetic::after{
   content:"";
@@ -150,8 +152,8 @@ p {font-size: 14px;  text-align: justify;
   opacity:0;
 }
 .btn.magnetic:hover::after{ opacity:1; }
-
-/* Hero subtle glow */
+*/
+/* Hero subtle glow 
 .hero-glow{
   position:absolute; inset:-20%;
   background:
@@ -160,7 +162,7 @@ p {font-size: 14px;  text-align: justify;
   pointer-events:none;
   filter: blur(0.5px);
 }
-
+*/
 
 section {
   min-height: 90vh;     /* Each section fills at least the full screen */
@@ -309,7 +311,7 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 .rotatingcard {
   margin-top: 20%;
   position: relative;
-  width: 100%;
+  width:100%;
   height: 300px;
   border-radius: 12px;
   display: flex;
@@ -323,7 +325,8 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 
 .rotatingcard img {
   
-  max-width:100%;
+  
+  max-width: 100%;
   object-fit: cover;
   border-radius: 12px;
   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
@@ -340,7 +343,7 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 40px;
   box-sizing: border-box;
   transform: rotateX(-90deg);
   transform-origin: bottom;
@@ -354,8 +357,8 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 .rotatingcard__title {
   margin: 0;
   font-size: 24px;
-  color: #333;
-  font-weight: 700;
+  color: #e0e0e079;
+  font-weight: 600;
 }
 
 .rotatingcard:hover img {
@@ -369,6 +372,6 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 .rotatingcard__description {
   margin: 10px 0 0;
   font-size: 14px;
-  color: #777;
-  line-height: 1.4;
+  color: #ebebeba6;
+  line-height: 1.8;
 }
