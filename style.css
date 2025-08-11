@@ -301,5 +301,5 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
   top: calc(48%) ;     /* 120px = space between them */
   transform: translateY(-5%);
 }
-.notch-btn a{ color: white;}
+.notch-btn a{ color: white; text-decoration: none;}
 /* For circ.js */
