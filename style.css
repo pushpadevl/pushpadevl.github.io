@@ -1,10 +1,9 @@
-/* Base (merge with your existing CSS) */
-/* Default (light) tokens */
+/* CTRL + F (Issues) fto see them*/
 :root {
   color-scheme: light dark; /* hints UA widgets to support both modes */
-  /* Not using dark mode, useless,bcoz the whole is dark*/
+  /* Issue 2: Not using dark mode, useless,bcoz the whole is dark*/
+  /*  --text:#232424;*/
   --text:#d2d3d6;
-/*  --text:#232424;*/
   --muted:#5b6270;
   --brand:#e9780e;
   --brand-2:#22c55e;
@@ -26,10 +25,7 @@
   }
 }
 */
-/* Apply tokens */
 html { background:#0c0d10; color: var(--text); height: auto;} /* Not changin bg color,uselss*/
-
-/* Minimal resets and layout scaffolding */
 body {
   color: var(--text); height: auto;
   scroll-snap-type: y mandatory;
@@ -56,7 +52,7 @@ header, footer { padding: 64px 24px; }
     .header-inner { display:flex; align-items:center; justify-content:space-between; max-width:1120px; margin:0 auto; }
 footer { background:#0f0f10; color:#eee; } /* dark mode changes if required*/
 
-/* is-scrolled is not used, kahan use kren ???*/
+/* Issue 3: is-scrolled is not used, kahan use kren ???*/
 .is-scrolled .header-bar,
 .is-scrolled header{
   background: rgba(12,13,16,.85);
@@ -69,7 +65,7 @@ p {font-size: 14px;  text-align: justify;
   word-wrap: break-word;
   hyphens: auto;
 }
-/* Not needed anymore, but keep it
+/* Issue 4: Not needed anymore, but keep it
 p .adapt{
   color:var(--text);
 }
@@ -132,7 +128,7 @@ p .adapt{
 
 
 /* Gradient accent shimmer (used on logos/lines) */
-/* 
+/* Issue 5: 
 .accent-line{
   height:24px;
   background: linear-gradient(90deg, transparent, var(--brand), var(--brand-2), transparent);
@@ -145,20 +141,6 @@ p .adapt{
   100% { background-position: -100% 0; }
 }
 */
-.btn { display:inline-block; padding:12px 20px; background:#186d11; color:#f1f1f1; text-decoration:none; border-radius:8px; }
-.btn.secondary { background:#186d11; color:#f1f1f1;}
-.btn.secondary:hover { background:#29941f; }
-/* Magnetic button 
-*/
-.btn.magnetic { position: relative; overflow: hidden; transform: translateZ(0); }
-.btn.magnetic::after{
-  content:"";
-  position:absolute; inset:-40%;
-  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.25), transparent 40%);
-  transition: opacity 0.3s ease;
-  opacity:0;
-}
-.btn.magnetic:hover::after{ opacity:1; }
 /**/
 .hero,
 #about,
@@ -175,7 +157,7 @@ p .adapt{
   position: relative;
   padding: 0;
 }
-/* Hero subtle glow 
+/* Issue 6: Hero subtle glow 
 
 .hero-glow{
   position:absolute; inset:-20%;
@@ -187,6 +169,7 @@ p .adapt{
 }
 */
 
+/* Layout elements */
 section {
   min-height: 90vh;     /* Each section fills at least the full screen */
   display: flex;
@@ -202,13 +185,6 @@ h1 {
 }
 nav a { color:#8d8d8d; text-decoration:none; margin:0 12px; }
 nav a:hover{ text-decoration: underline;}
-
-/* Motion helpers */
-.will-reveal { opacity:0; transform: translateY(24px); }
-.revealed { opacity:1 !important; transform:none !important; transition:opacity .9s ease, transform .9s ease; }
-.parallax { transform: translateY(0); will-change: transform; }
-
-/* Layout elements */
 .grid { display:grid; gap:24px; }
 .cards { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .card { border:1px solid var(--border); border-radius:12px; padding:20px;  }
@@ -222,27 +198,48 @@ nav a:hover{ text-decoration: underline;}
   nav { display:none; }
 }
 
+/* Motion helpers */
+.will-reveal { opacity:0; transform: translateY(24px); }
+.revealed { opacity:1 !important; transform:none !important; transition:opacity .9s ease, transform .9s ease; }
+.parallax { transform: translateY(0); will-change: transform; }
+/* Issue 1: Not visible,change if needed*/
+
+/*Typewriter for quotes*/
 #typewriter {
   display: inline-block;
   white-space: normal; /* allow wrapping across lines */
   overflow: hidden;
   border-right: 2px solid currentColor; /* caret */
 }
-
 /* Blink the caret while typing */
 .typing {
   animation: blink 0.9s step-end infinite;
 }
-
 @keyframes blink {
 50% { border-color: transparent; }
 }
-
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   #typewriter { border-right: 0; }
   .typing { animation: none; }
 }
+
+/*Buttons*/
+.btn { display:inline-block; padding:12px 20px; background:#186d11; color:#f1f1f1; text-decoration:none; border-radius:8px; }
+.btn.secondary { background:#186d11; color:#f1f1f1;}
+.btn.secondary:hover { background:#29941f; }
+/* Magnetic button 
+*/
+.btn.magnetic { position: relative; overflow: hidden; transform: translateZ(0); }
+.btn.magnetic::after{
+  content:"";
+  position:absolute; inset:-40%;
+  background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.25), transparent 40%);
+  transition: opacity 0.3s ease;
+  opacity:0;
+}
+.btn.magnetic:hover::after{ opacity:1; }
+
 
 /*Side Notch buttons*/
 .notch-buttons {
@@ -377,4 +374,4 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
 
-/* For circ.js */
+/* Issue 7: For circ.js */
