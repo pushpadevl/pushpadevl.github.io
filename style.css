@@ -65,6 +65,42 @@ p {font-size: 14px;  text-align: justify;
   word-wrap: break-word;
   hyphens: auto;
 }
+
+/* Layout elements */
+section {
+  min-height: 90vh;     /* Each section fills at least the full screen */
+  display: flex;
+  align-items: center;   /* Vertically center section content */
+  justify-content: center; /* Optional: horizontally center (for single-column layouts) */
+  padding: 0;            /* Remove extra padding—add via inner .container if needed */
+  position: relative;
+  scroll-snap-align: start;
+}
+h1 {
+  font-size: 60px;   /* or 2.5rem, 200%, etc. */
+  line-height: 2;  /* optional for readability */
+}
+nav a { color:#8d8d8d; text-decoration:none; margin:0 12px; }
+nav a:hover{ text-decoration: underline;}
+.grid { display:grid; gap:24px; }
+.cards { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.card { border:1px solid var(--border); border-radius:12px; padding:20px;  }
+.logo { font-weight:700; }
+.muted { color: var(--muted); }
+.section-title { font-size:32px; margin-bottom:16px; }
+.subhead { font-size:28px; color:#0e5008; }
+.two-col { display:grid; grid-template-columns: 1.2fr 1fr; gap:24px; }
+@media (max-width: 880px) {
+  .two-col { grid-template-columns: 1fr; }
+  nav { display:none; }
+}
+
+/* Motion helpers */
+.will-reveal { opacity:0; transform: translateY(24px); }
+.revealed { opacity:1 !important; transform:none !important; transition:opacity .9s ease, transform .9s ease; }
+.parallax { transform: translateY(0); will-change: transform; }
+/* Issue 1: Not visible,change if needed*/
+
 /* Issue 4: Not needed anymore, but keep it
 p .adapt{
   color:var(--text);
@@ -142,14 +178,8 @@ p .adapt{
 }
 */
 /**/
-.hero,
-#about,
-#github,
-#research,
-#intro,
-#recreation,
-#almaematres,
-#contact {
+
+#about,#github,#research,#intro,#recreation,#almaematres,#contact {
   min-height: 75vh;
   display: flex;
   align-items: center;
@@ -169,40 +199,6 @@ p .adapt{
 }
 */
 
-/* Layout elements */
-section {
-  min-height: 90vh;     /* Each section fills at least the full screen */
-  display: flex;
-  align-items: center;   /* Vertically center section content */
-  justify-content: center; /* Optional: horizontally center (for single-column layouts) */
-  padding: 0;            /* Remove extra padding—add via inner .container if needed */
-  position: relative;
-  scroll-snap-align: start;
-}
-h1 {
-  font-size: 60px;   /* or 2.5rem, 200%, etc. */
-  line-height: 2;  /* optional for readability */
-}
-nav a { color:#8d8d8d; text-decoration:none; margin:0 12px; }
-nav a:hover{ text-decoration: underline;}
-.grid { display:grid; gap:24px; }
-.cards { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.card { border:1px solid var(--border); border-radius:12px; padding:20px;  }
-.logo { font-weight:700; }
-.muted { color: var(--muted); }
-.section-title { font-size:32px; margin-bottom:16px; }
-.subhead { font-size:28px; color:#0e5008; }
-.two-col { display:grid; grid-template-columns: 1.2fr 1fr; gap:24px; }
-@media (max-width: 880px) {
-  .two-col { grid-template-columns: 1fr; }
-  nav { display:none; }
-}
-
-/* Motion helpers */
-.will-reveal { opacity:0; transform: translateY(24px); }
-.revealed { opacity:1 !important; transform:none !important; transition:opacity .9s ease, transform .9s ease; }
-.parallax { transform: translateY(0); will-change: transform; }
-/* Issue 1: Not visible,change if needed*/
 
 /*Typewriter for quotes*/
 #typewriter {
@@ -228,8 +224,8 @@ nav a:hover{ text-decoration: underline;}
 .btn { display:inline-block; padding:12px 20px; background:#186d11; color:#f1f1f1; text-decoration:none; border-radius:8px; }
 .btn.secondary { background:#186d11; color:#f1f1f1;}
 .btn.secondary:hover { background:#29941f; }
-/* Magnetic button 
-*/
+
+/* Magnetic button */
 .btn.magnetic { position: relative; overflow: hidden; transform: translateZ(0); }
 .btn.magnetic::after{
   content:"";
