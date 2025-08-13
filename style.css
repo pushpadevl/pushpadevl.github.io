@@ -163,22 +163,6 @@ p .adapt{
 }
 
 
-/* Gradient accent shimmer (used on logos/lines) */
-/* Issue 5: 
-.accent-line{
-  height:24px;
-  background: linear-gradient(90deg, transparent, var(--brand), var(--brand-2), transparent);
-  background-size: 150% 100%;
-  animation: shimmer 3s linear infinite;
-  opacity:.6;
-}
-@keyframes shimmer{
-  0% { background-position: 200% 0; }
-  100% { background-position: -100% 0; }
-}
-*/
-/**/
-
 #about,#github,#research,#intro,#recreation,#almaematres,#contact {
   min-height: 75vh;
   display: flex;
@@ -197,7 +181,23 @@ p .adapt{
   pointer-events:none;
   filter: blur(0.5px);
 }
+
+
+/* Gradient accent shimmer (used on logos/lines) */
+/* Issue 5: 
+.accent-line{
+  height:24px;
+  background: linear-gradient(90deg, transparent, var(--brand), var(--brand-2), transparent);
+  background-size: 150% 100%;
+  animation: shimmer 3s linear infinite;
+  opacity:.6;
+}
+@keyframes shimmer{
+  0% { background-position: 200% 0; }
+  100% { background-position: -100% 0; }
+}
 */
+/**/
 
 
 /*Typewriter for quotes*/
@@ -239,18 +239,17 @@ p .adapt{
 
 /*Side Notch buttons*/
 .notch-buttons {
-position: fixed;
-right: 16px; /* distance from right edge */
-top: 40%; /* vertical position; adjust as needed */
-display: flex;
-flex-direction: column;
-gap: 12px; /* space between buttons */
-z-index: 1000; /* above page content */
+  position: fixed;
+  right: 16px; /* distance from right edge */
+  top: 40%; /* vertical position; adjust as needed */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* space between buttons */
+  z-index: 1000; /* above page content */
 }
-
 .notch-btn {
- position: fixed;
- height:107px;
+  position: fixed;
+  height:12%;
   right: 0px;
   z-index: 1000;
   display: inline-block;
@@ -270,34 +269,29 @@ z-index: 1000; /* above page content */
   /*text-orientation: upright;*/
   letter-spacing: 0.5px;
 }
-
 .notch-btn:hover {
 background: #219117; /* darker on hover */
 transform: translateY(-1px) scale(1.1);
 box-shadow: 0 6px 16px rgba(0,0,0,0.18);
 }
-
 .notch-btn:active {
 transform: translateY(0);
 box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 /* Position the first (top) button */
 .notch-1 {
-  top: 24%;                  /* adjust as needed */
+  top: 23%;                  /* adjust as needed */
   transform: translateY(-5%);
 }
-
 .notch-2 {
   top: calc(36%);     /* 120px = space between them */
   transform: translateY(-5%);
 }
-
 .notch-3 {
-  top: calc(48%) ;     /* 120px = space between them */
+  top: calc(49%) ;     /* 120px = space between them */
   transform: translateY(-5%);
 }
 .notch-btn a{ color: white; text-decoration: none;}
-
 
 
 /* Rotating picture card */
@@ -315,7 +309,6 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-
 .rotatingcard img {
   
   
@@ -338,36 +331,32 @@ box-shadow: 0 3px 8px rgba(0,0,0,0.2);
   height: 100%;
   padding: 40px;
   box-sizing: border-box;
-  transform: rotateX(-90deg);
+  transform: rotateX(-100deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
 .rotatingcard:hover .rotatingcard__content {
   transform: rotateX(0deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
-
 .rotatingcard__title {
   margin: 0;
   font-size: 24px;
   color: #e0e0e079;
   font-weight: 600;
 }
-
 .rotatingcard:hover img {
-  transform:rotateX(90deg); /* at 90, lying placard, 100 looks fine on PC, but not on  Mobile*/
+  transform:rotateX(100deg); /* at 90, lying placard, 100 looks fine on PC, but not on  Mobile*/
   transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1);
-
-  
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1); 
 }
-
 .rotatingcard__description {
   margin: 10px 0 0;
   font-size: 14px;
   color: #ebebeba6;
   line-height: 1.8;
 }
-
 
 /* Issue 7: For circ.js */
