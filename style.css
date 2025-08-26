@@ -84,7 +84,13 @@ nav a { color:#8d8d8d; text-decoration:none; margin:0 12px; }
 nav a:hover{ text-decoration: underline;}
 .grid { display:grid; gap:24px; }
 .cards { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-.card { border:1px solid var(--border); border-radius:12px; padding:20px;  }
+.card { 
+  border:1px solid var(--border); 
+  border-radius:12px; 
+  padding:20px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* pushes content apart */ }
 .logo { font-weight:700; }
 .muted { color: var(--muted); }
 .section-title { font-size:32px; margin-bottom:16px; }
@@ -219,10 +225,11 @@ p .adapt{
   #typewriter { border-right: 0; }
   .typing { animation: none; }
 }
+.card-content {  display: flex;}
 
 /*Buttons*/
 .btn { display:inline-block; padding:12px 20px; background:#186d11; color:#f1f1f1; text-decoration:none; border-radius:8px; }
-.btn.secondary { background:#186d11; color:#f1f1f1;}
+.btn.secondary { background:#186d11; color:#f1f1f1; margin-top: auto; align-self: flex-start;}
 .btn.secondary:hover { background:#29941f; }
 
 /* Magnetic button */
