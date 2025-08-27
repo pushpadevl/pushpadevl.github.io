@@ -87,7 +87,7 @@ footer {
   margin: 0 auto;
   padding: 48px 20px;
 }
- 
+
 /* js adds this class to header during scroll*/
 .is-scrolled header,
 .is-scrolled .header-bar {
@@ -111,7 +111,7 @@ footer {
 /* Layout elements */
 a {
   color: #219117;
-  }
+}
 nav a {
   color: #8d8d8d;
   text-decoration: none;
@@ -217,12 +217,12 @@ h1 {
 }
 .subhead {
   font-size: 28px;
-  color: #1a8b10;/*hidden at start
+  color: #1a8b10; /*hidden at start
   */
-  opacity: 0;                            
+  opacity: 0;
   transform: translateY(20px);
-  animation: slideFadeIn 0.8s ease forwards;  /* fade in animation */
-  animation-delay: 4.5s;                 /* wait 2 seconds after load */
+  animation: slideFadeIn 0.8s ease forwards; /* fade in animation */
+  animation-delay: 4.5s; /* wait 2 seconds after load */
 
   /*animation-fill-mode:backwards;   /* ⬅️ important! */
 }
@@ -546,4 +546,3 @@ h1 {
   color: #ebebeba6;
   line-height: 1.8;
 }
-
