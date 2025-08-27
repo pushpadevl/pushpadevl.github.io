@@ -55,12 +55,6 @@ header,
 footer {
   padding: 64px 24px;
 }
-.container {
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 48px 20px;
-}
 /* Sticky header transition */
 .header-bar,
 header {
@@ -86,9 +80,15 @@ header {
 footer {
   background: #0f0f10;
   color: #eee;
-} /* dark mode changes if required*/
-
-/* Issue 3: is-scrolled is not used, kahan use kren ???*/
+}
+.container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+ 
+/* js adds this class to header during scroll*/
 .is-scrolled header,
 .is-scrolled .header-bar {
   background: rgba(12, 13, 16, 0.85);
@@ -109,6 +109,9 @@ footer {
 }
 
 /* Layout elements */
+a {
+  color: #219117;
+  }
 nav a {
   color: #8d8d8d;
   text-decoration: none;
@@ -214,9 +217,22 @@ h1 {
 }
 .subhead {
   font-size: 28px;
-  color: #0e5008;
+  color: #1a8b10;/*hidden at start
+  */
+  opacity: 0;                            
+  transform: translateY(20px);
+  animation: slideFadeIn 0.8s ease forwards;  /* fade in animation */
+  animation-delay: 4.5s;                 /* wait 2 seconds after load */
+
+  /*animation-fill-mode:backwards;   /* ⬅️ important! */
 }
 
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Motion helpers */
 .will-reveal {
   opacity: 0;
@@ -233,13 +249,6 @@ h1 {
   transform: translateY(0);
   will-change: transform;
 }
-/* Issue 1: Not visible,change if needed*/
-
-/* Issue 4: Not needed anymore, but keep it
-p .adapt{
-  color:var(--text);
-}
-  */
 
 /* Fixed background layer covering the viewport */
 .site-bg {
@@ -394,8 +403,6 @@ p .adapt{
 .btn.secondary:hover {
   background: #29941f;
 }
-
-/* Magnetic button */
 .btn.magnetic {
   position: relative;
   overflow: hidden;
@@ -415,13 +422,6 @@ p .adapt{
 }
 .btn.magnetic:hover::after {
   opacity: 1;
-}
-
-a {
-  color: #186d11;
-}
-a:hover {
-  color: #219117;
 }
 /*Side Notch buttons*/
 .notch-buttons {
@@ -506,12 +506,10 @@ a:hover {
   border-radius: 12px;
   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
 .rotatingcard:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
-
 .rotatingcard__content {
   position: absolute;
   top: 0;
@@ -524,7 +522,6 @@ a:hover {
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
-
 .rotatingcard:hover .rotatingcard__content {
   transform: rotateX(0deg);
   transform-origin: bottom;
@@ -550,4 +547,3 @@ a:hover {
   line-height: 1.8;
 }
 
-/* Issue 7: For circ.js */
