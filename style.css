@@ -89,22 +89,82 @@ footer {
 } /* dark mode changes if required*/
 
 /* Issue 3: is-scrolled is not used, kahan use kren ???*/
-.is-scrolled .header-bar,
-.is-scrolled header {
+.is-scrolled header,
+.is-scrolled .header-bar {
   background: rgba(12, 13, 16, 0.85);
   backdrop-filter: saturate(150%) blur(8px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   border-bottom-color: rgba(84, 226, 28, 0.856);
 }
-p {
-  font-size: 14px;
-  text-align: justify;
-  text-justify: inter-word;
-  word-wrap: break-word;
-  hyphens: auto;
+/* Desktop nav visible by default */
+.desktop-nav {
+  display: flex;
+  gap: 0mm;
+  align-items: center;
+}
+
+/* Mobile nav hidden by default */
+.mobile-nav {
+  display: none;
 }
 
 /* Layout elements */
+nav a {
+  color: #8d8d8d;
+  text-decoration: none;
+  margin: 0 12px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  /* show hamburger, hide nav by default */
+  .menu-toggle {
+    display: block;
+  }
+  .desktop-nav {
+    display: none; /* hide inline nav */
+  }
+
+  .mobile-nav {
+    display: none; /* hidden until toggled */
+    flex-direction: column;
+    position: fixed;
+    gap: 0.75rem; /* ⬅️ adds space between links */
+    top: 60px; /* just below header */
+    right: 1rem;
+    width: 20%;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(1, 1, 1, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+  }
+
+  /* When JS toggles .show, it becomes visible */
+  .mobile-nav.show {
+    display: flex;
+  }
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+}
 section {
   min-height: 90vh; /* Each section fills at least the full screen */
   display: flex;
@@ -114,17 +174,16 @@ section {
   position: relative;
   scroll-snap-align: start;
 }
+p {
+  font-size: 14px;
+  text-align: justify;
+  text-justify: inter-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
 h1 {
   font-size: 60px; /* or 2.5rem, 200%, etc. */
   line-height: 2; /* optional for readability */
-}
-nav a {
-  color: #8d8d8d;
-  text-decoration: none;
-  margin: 0 12px;
-}
-nav a:hover {
-  text-decoration: underline;
 }
 .grid {
   display: grid;
@@ -156,19 +215,6 @@ nav a:hover {
 .subhead {
   font-size: 28px;
   color: #0e5008;
-}
-.two-col {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 24px;
-}
-@media (max-width: 880px) {
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-  nav {
-    display: none;
-  }
 }
 
 /* Motion helpers */
@@ -333,7 +379,7 @@ p .adapt{
 /*Buttons*/
 .btn {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 12px 12px;
   background: #186d11;
   color: #f1f1f1;
   text-decoration: none;
@@ -414,7 +460,7 @@ a:hover {
 }
 .notch-btn:hover {
   background: #219117; /* darker on hover */
-  transform: translateY(-1px) scale(1.1);
+  transform: translateY(-1px) scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 .notch-btn:active {

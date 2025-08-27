@@ -23,23 +23,41 @@
       <div class="header-inner">
         <!--<div class="logo accent-line">Pushpendra Pal</div>-->
         <div class="logo">Pushpendra Pal</div>
-        <nav>
+        <button class="menu-toggle">☰</button>
+        <nav class="desktop-nav">
           <a href="#intro">Intro</a>
           <a href="#almaematres">Almae Matres</a>
           <a href="#research">Research</a>
           <a href="#projects">Projects</a>
           <a href="#recreation">Recreation</a>
-          <a href="https://github.com/pushpadevl">GitHub</a>
-          <a href="https://crates.io/users/pushpadevl">Crates.io</a>
+          <a href="https://github.com/pushpadevl" target="_blank">GitHub</a>
+          <a href="https://crates.io/users/pushpadevl" target="_blank"
+            >Crates.io</a
+          >
           <a href="#about">About</a>
           <!--<button id="theme-toggle" aria-pressed="false" class="btn secondary" title="[Toggle theme]">Toggle theme</button>
       -->
-          <a href="#contact" class="btn" style="margin-left: 12px"
-            >Let's Talk</a
+          <a href="#contact" class="btn secondary" style="margin-left: 12px"
+            >Get in Touch</a
           >
         </nav>
       </div>
     </div>
+    <nav class="mobile-nav">
+      <a href="#intro">Intro</a>
+      <a href="#almaematres">Almae Matres</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#recreation">Recreation</a>
+      <a href="https://github.com/pushpadevl" target="_blank">GitHub</a>
+      <a href="https://crates.io/users/pushpadevl" target="_blank">Crates.io</a>
+      <a href="#about">About</a>
+      <!--<button id="theme-toggle" aria-pressed="false" class="btn secondary" title="[Toggle theme]">Toggle theme</button>
+      -->
+      <a href="#contact" class="btn secondary" style="margin-left: 12px"
+        >Get in Touch</a
+      >
+    </nav>
 
     <div class="site-bg" aria-hidden="true"></div>
 
@@ -103,10 +121,13 @@
               or scroll down to see more.
             </p>
             <div style="margin-top: 46px" class="will-reveal parallax">
-              <a href="#github" class="btn magnetic" style="margin-left: 8px"
+              <a
+                href="#github"
+                class="btn secondary magnetic"
+                style="margin-left: 8px"
                 >See My Work</a
               >
-              <a href="#contact" class="btn magnetic">Email Me</a>
+              <a href="#contact" class="btn secondary magnetic">Email Me</a>
             </div>
             <!--<p class="muted" style="margin-top:12px;">[Logos/credential snippet placeholder]</p>-->
           </div>
@@ -216,7 +237,7 @@
 
           <a
             href="#github"
-            class="btn magnetic"
+            class="btn magnetic secondary"
             style="margin-top: 16px; display: inline-block"
             >Visit projects</a
           >
@@ -766,7 +787,7 @@
               thought process as mine.
             </p>
 
-            <a href="#contact" class="btn magnetic">Let’s Talk</a>
+            <a href="#contact" class="btn secondary magnetic">Reach Out</a>
           </div>
           <div class="rotatingcard will-reveal parallax">
             <img src="./IMG/r5.png" />
@@ -789,7 +810,7 @@
       <!-- Contact -->
       <section id="contact">
         <div class="container will-reveal">
-          <h2 class="section-title">Get in Touch</h2>
+          <h2 class="section-title">Connect</h2>
           <div>
             <form id="contact-form">
               <label style="font-weight: 700"
@@ -948,5 +969,13 @@
     <script type="text/javascript" src="./JS/typewriter.js"></script>
     <script type="text/javascript" src="./JS/parallax.js"></script>
     <script type="text/javascript" src="./JS/msg.js"></script>
+    <script>
+      const toggleBtn = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".mobile-nav");
+
+      toggleBtn.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>
