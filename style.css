@@ -3,7 +3,7 @@
   color-scheme: light dark; /* hints UA widgets to support both modes */
   /* Issue 2: Not using dark mode, useless,bcoz the whole is dark*/
   /*  --text:#232424;*/
-  --text: #d2d3d6;
+  --text: #919191;
   --muted: #5b6270;
   --brand: #e9780e;
   --brand-2: #22c55e;
@@ -43,7 +43,6 @@ body {
     Roboto,
     Arial,
     sans-serif;
-  color: #919191;
   line-height: 1.5;
 }
 #app {
@@ -128,46 +127,46 @@ nav a:hover {
   border: none;
   cursor: pointer;
 }
-
-@media (max-width: 1100px) {
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-  /* show hamburger, hide nav by default */
-  .menu-toggle {
-    display: block;
-  }
-  .desktop-nav {
-    display: none; /* hide inline nav */
-  }
-
-  .mobile-nav {
-    display: none; /* hidden until toggled */
-    flex-direction: column;
-    position: fixed;
-    gap: 0.75rem; /* ⬅️ adds space between links */
-    top: 60px; /* just below header */
-    right: 1rem;
-    width: 20%;
-    padding: 1rem;
-    border-radius: 8px;
-    background: rgba(1, 1, 1, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    z-index: 999;
-  }
-
-  /* When JS toggles .show, it becomes visible */
-  .mobile-nav.show {
-    display: flex;
-  }
+.footer-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  margin-right: 20px;
 }
 .two-col {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 24px;
 }
+
+/* Fallback: solid color for browsers without backdrop-filter */
+.work-glass {
+  /* no blur grayscale */
+  background: rgba(1, 1, 1, 0.15); /* translucent */
+  border: none; /* subtle edge for contrast */
+  /* Blur the backdrop (area behind the section) */
+  -webkit-backdrop-filter: brightness(40%) saturate(5%) contrast(100%);
+  backdrop-filter: brightness(40%) saturate(5%) contrast(100%);
+}
+.work-glass-color-blur {
+  /* color blur  */
+  background: rgba(1, 1, 1, 0.15); /* translucent */
+  border: none; /* subtle edge for contrast */
+  /* Blur the backdrop (area behind the section) */
+  -webkit-backdrop-filter: blur(10px) brightness(90%) saturate(150%)
+    contrast(100%);
+  backdrop-filter: blur(10px) brightness(70%) saturate(150%) contrast(100%);
+}
+.work-glass-gray-blur {
+  /* blur  gray*/
+  background: rgba(1, 1, 1, 0.15); /* translucent */
+  border: none; /* subtle edge for contrast */
+  /* Blur the backdrop (area behind the section) */
+  -webkit-backdrop-filter: blur(10px) brightness(40%) saturate(5%)
+    contrast(100%);
+  backdrop-filter: blur(10px) brightness(40%) saturate(5%) contrast(100%);
+}
+
 section {
   min-height: 90vh; /* Each section fills at least the full screen */
   display: flex;
@@ -227,12 +226,6 @@ h1 {
   /*animation-fill-mode:backwards;   /* ⬅️ important! */
 }
 
-@keyframes slideFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* Motion helpers */
 .will-reveal {
   opacity: 0;
@@ -265,53 +258,6 @@ h1 {
   background-position: center;
   background-repeat: no-repeat;
   transform: translate3d(0, 0, 0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-bg {
-    transform: none !important;
-  }
-  .will-reveal {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-  /*.accent-line { animation: none; } enable when accent line is needed*/
-}
-
-/* Fallback: solid color for browsers without backdrop-filter */
-.work-glass {
-  /* no blur grayscale */
-  background: rgba(1, 1, 1, 0.15); /* translucent */
-  border: none; /* subtle edge for contrast */
-  /* Blur the backdrop (area behind the section) */
-  -webkit-backdrop-filter: brightness(40%) saturate(5%) contrast(100%);
-  backdrop-filter: brightness(40%) saturate(5%) contrast(100%);
-}
-.work-glass-color-blur {
-  /* color blur  */
-  background: rgba(1, 1, 1, 0.15); /* translucent */
-  border: none; /* subtle edge for contrast */
-  /* Blur the backdrop (area behind the section) */
-  -webkit-backdrop-filter: blur(10px) brightness(90%) saturate(150%)
-    contrast(100%);
-  backdrop-filter: blur(10px) brightness(70%) saturate(150%) contrast(100%);
-}
-.work-glass-gray-blur {
-  /* blur  gray*/
-  background: rgba(1, 1, 1, 0.15); /* translucent */
-  border: none; /* subtle edge for contrast */
-  /* Blur the backdrop (area behind the section) */
-  -webkit-backdrop-filter: blur(10px) brightness(40%) saturate(5%)
-    contrast(100%);
-  backdrop-filter: blur(10px) brightness(40%) saturate(5%) contrast(100%);
-}
-/* Feature-detect support to lower opacity when blur is available */
-@supports (
-  (-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))
-) {
-  .work-glass {
-    background: rgba(1, 1, 1, 0.15);
-  }
 }
 
 #about,
@@ -367,20 +313,7 @@ h1 {
 .typing {
   animation: blink 0.9s step-end infinite;
 }
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-/* Respect users who prefer reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  #typewriter {
-    border-right: 0;
-  }
-  .typing {
-    animation: none;
-  }
-}
+
 .card-content {
   display: flex;
 }
@@ -516,9 +449,9 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding: 30px;
   box-sizing: border-box;
-  transform: rotateX(-100deg);
+  transform: rotateX(-94.5deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
@@ -535,7 +468,7 @@ h1 {
 }
 .rotatingcard:hover img {
   transform: rotateX(
-    100deg
+    94.5deg
   ); /* at 90, lying placard, 100 looks fine on PC, but not on  Mobile*/
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1);
@@ -544,5 +477,86 @@ h1 {
   margin: 10px 0 0;
   font-size: 14px;
   color: #ebebeba6;
-  line-height: 1.8;
+  line-height: 1.5;
+}
+
+/* Feature-detect support to lower opacity when blur is available */
+@supports (
+  (-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))
+) {
+  .work-glass {
+    background: rgba(1, 1, 1, 0.15);
+  }
+}
+@media (max-width: 990px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+  /* show hamburger, hide nav by default */
+  .menu-toggle {
+    display: block;
+  }
+  .desktop-nav {
+    display: none; /* hide inline nav */
+  }
+  .mobile-nav {
+    display: none; /* hidden until toggled */
+    flex-direction: column;
+    position: fixed;
+    gap: 0.75rem; /* ⬅️ adds space between links */
+    top: 60px; /* just below header */
+    right: 1rem;
+    width: 20%;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(1, 1, 1, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+  }
+
+  /* When JS toggles .show, it becomes visible */
+  .mobile-nav.show {
+    display: flex;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .work-glass,
+  .work-glass-color-blur,
+  .work-glass-gray-blur,
+  .is-scrolled .header-bar {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(20, 20, 20, 0.9) !important;
+  }
+}
+@keyframes slideFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-bg {
+    transform: none !important;
+  }
+  .will-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  #typewriter {
+    border-right: 0;
+  }
+  .typing {
+    animation: none;
+  }
+  /*.accent-line { animation: none; } enable when accent line is needed*/
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
