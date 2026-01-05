@@ -138,6 +138,11 @@ nav a:hover {
   grid-template-columns: 1.2fr 1fr;
   gap: 24px;
 }
+.two-col-almamatres {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  gap: 20px;
+}
 
 /* Fallback: solid color for browsers without backdrop-filter */
 .work-glass {
